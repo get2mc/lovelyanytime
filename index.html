@@ -7,6 +7,7 @@
 <meta name="description" content="Strategic oversight and operational engineering for independent luxury hotels, private estates, and hospitality investment assets.">
 <meta name="keywords" content="luxury hotel consultant, hospitality asset advisor, pre-opening hospitality consultant, owner representation hospitality">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -114,8 +115,9 @@
   .hero-inner {
     position: relative; z-index: 1;
     display: grid; grid-template-columns: 1fr 360px;
-    gap: 80px; align-items: center; width: 100%;
+    gap: 80px; align-items: center; width: 100%; min-height: 50vh;
   }
+  .hero-left { min-width: 0; display: block; }
   .hero-label {
     font-size: 9px; font-weight: 400; letter-spacing: 0.28em;
     text-transform: uppercase; color: var(--stone); margin-bottom: 28px;
@@ -335,7 +337,7 @@
 <section id="hero" class="hero">
   <div class="container" style="width:100%;">
     <div class="hero-inner">
-      <div>
+      <div class="hero-left">
         <div class="hero-label fu">Luxury Hospitality Asset Advisory</div>
         <h1 class="fu fu2">Mark<br>Collins</h1>
         <div class="hero-sub fu fu3">
