@@ -382,7 +382,7 @@
 </main>
 
 <footer>
-  <p>© 2025 Lovely Anytime &nbsp;·&nbsp; Mark Collins</p>
+  <p>© 2025 Lovely Anytime &nbsp;·&nbsp; Mark Collins &nbsp;·&nbsp; <a href="#" onclick="showPrivacy()" style="color:var(--linen);text-decoration:none;letter-spacing:0.1em;">Privacy Policy</a></p>
 </footer>
 
 <script>
@@ -425,5 +425,71 @@
     }
   }
 </script>
+
+<!-- PRIVACY POLICY MODAL -->
+<div id="privacyModal" style="display:none; position:fixed; inset:0; background:rgba(250,248,245,0.98); z-index:500; overflow-y:auto; padding:60px 24px;">
+  <div style="max-width:640px; margin:0 auto;">
+    <button onclick="hidePrivacy()" style="background:none; border:none; font-family:var(--sans); font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); cursor:pointer; margin-bottom:48px; padding:0;">← Back</button>
+    <p style="font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); margin-bottom:16px;">Privacy Policy</p>
+    <div style="width:36px; height:1px; background:var(--accent); margin-bottom:32px;"></div>
+    <h1 style="font-family:var(--serif); font-size:36px; font-weight:300; color:var(--charcoal); margin-bottom:40px; line-height:1.1;">Privacy Policy</h1>
+
+    <p style="font-size:12px; color:var(--stone); margin-bottom:40px; letter-spacing:0.04em;">Last updated: March 2025</p>
+
+    <div style="display:flex; flex-direction:column; gap:36px;">
+
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">1. Who We Are</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">This website is operated by Mark Collins, trading as Lovely Anytime. For any privacy-related queries, contact: <a href="mailto:mjf.collins@gmail.com" style="color:var(--charcoal);">mjf.collins@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">2. What Data We Collect</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">When you submit an enquiry through this website, we collect the following information: your name, email address, company name, asset type, location, and any description you provide. No other data is collected. We do not use cookies, tracking scripts, or analytics tools.</p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">3. How We Use Your Data</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Your data is used solely to respond to your enquiry and to determine whether an engagement is appropriate. It is not used for marketing, profiling, or any other purpose.</p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">4. Third Parties</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Enquiry data is processed by Formspree (formspree.io), a secure form handling service, solely for the purpose of delivering your message. Your data is never sold or shared with any other third party. Formspree's privacy policy can be found at formspree.io/legal/privacy-policy.</p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">5. Data Retention</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Your data is retained only for as long as necessary to manage your enquiry. If no engagement follows, data is deleted within 12 months of initial contact.</p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">6. Your Rights</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Under GDPR you have the right to access, correct, or request deletion of your personal data at any time. To exercise these rights, contact <a href="mailto:mjf.collins@gmail.com" style="color:var(--charcoal);">mjf.collins@gmail.com</a> and we will respond within 30 days.</p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">7. Changes to This Policy</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">This policy may be updated periodically. Any changes will be reflected on this page with a revised date.</p>
+      </div>
+
+    </div>
+
+    <div style="margin-top:60px; padding-top:32px; border-top:1px solid var(--rule);">
+      <button onclick="hidePrivacy()" style="background:none; border:none; font-family:var(--sans); font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); cursor:pointer; padding:0;">← Back to site</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showPrivacy() {
+    document.getElementById('privacyModal').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+  function hidePrivacy() {
+    document.getElementById('privacyModal').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
