@@ -49,7 +49,7 @@
 
   /* ── LOGO ── */
   .logo-wrap svg {
-    width: 480px;
+    width: 420px;
     height: auto;
     display: block;
   }
@@ -200,6 +200,67 @@
     margin: 0 auto;
   }
 
+
+  /* ── BLURB ── */
+  .blurb {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+  }
+
+  .blurb-name {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--charcoal);
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+
+  .blurb-title {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 24px;
+  }
+
+  .blurb-rule {
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0 auto 24px;
+  }
+
+  .blurb-body {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+
+  .expertise {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    margin-bottom: 24px;
+  }
+
+  .expertise span {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone);
+    padding: 7px 14px;
+    border: 1px solid var(--rule);
+  }
+
+  .blurb-body:last-child { margin-bottom: 0; }
+
   /* ── FOOTER ── */
   footer {
     text-align: center;
@@ -225,7 +286,7 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 520px) {
     .form-row { grid-template-columns: 1fr; }
-    .logo-wrap svg { width: 220px; }
+    .logo-wrap svg { width: 300px; }
   }
 </style>
 </head>
@@ -242,7 +303,25 @@
     </svg>
   </div>
 
-  <div class="divider"></div>
+
+  <!-- BLURB -->
+  <div class="blurb">
+    <p class="blurb-name">Mark Collins</p>
+    <p class="blurb-title">Luxury Hospitality Asset Advisor &nbsp;·&nbsp; Founder, Lovely Anytime</p>
+    <div class="blurb-rule"></div>
+    <p class="blurb-body">Two decades of executive leadership across independent luxury hotels, private estates, and investment-grade hospitality assets in Europe, the United States, and the Caribbean — including senior roles at The Standard, High Line and Island Outpost Hotels.</p>
+
+    <div class="expertise">
+      <span>Asset Performance Audit</span>
+      <span>Pre-Opening & Repositioning</span>
+      <span>Owner Representation</span>
+      <span>Operational Engineering</span>
+      <span>CAPEX & Budget Oversight</span>
+      <span>Leadership Development</span>
+    </div>
+
+    <p class="blurb-body">He works exclusively on the owner side: auditing performance, managing pre-openings, and representing principals who require direct oversight of their assets. Engagements are limited and accepted by selection.</p>
+  </div>
 
   <!-- FORM -->
   <div class="form-wrap">
