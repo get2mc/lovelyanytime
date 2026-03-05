@@ -552,7 +552,7 @@
               <label>Email Address</label>
               <input type="email" id="femail" placeholder="your@email.com" autocomplete="email">
             </div>
-            <button class="btn-submit" id="submitBtn" onclick="submitForm()">Get in Touch</button>
+            <button class="btn-submit" id="submitBtn" type="button">Get in Touch</button>
             <p class="form-note">All enquiries handled with discretion.</p>
           </div>
         </div>
@@ -616,7 +616,9 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false">
+  document.getElementById('submitBtn').addEventListener('click', submitForm);
+
   async function submitForm() {
     const name  = document.getElementById('fname').value.trim();
     const email = document.getElementById('femail').value.trim();
