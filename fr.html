@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lovely Anytime — Conseil en Hôtellerie, Provence</title>
+<meta name="description" content="Un petit cabinet de conseil en hôtellerie basé en Provence. Restauration, positionnement de marque, opérations, formation et conseil en IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0d0d0b;
+    --charcoal: #1c1c1a;
+    --warm-white: #faf8f5;
+    --off-white: #f2efe9;
+    --stone: #a89f95;
+    --linen: #d6d0c8;
+    --accent: #8b7355;
+    --text: #3a3834;
+    --text-muted: #7a7570;
+    --rule: rgba(168,159,149,0.22);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── CONTAINER ── */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 72px 0 64px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  header svg {
+    width: 380px;
+    height: auto;
+    display: block;
+    margin: 0 auto 28px;
+  }
+
+  header p {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--stone);
+    font-weight: 300;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section:last-of-type { border-bottom: none; }
+
+  .section-label {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    margin-bottom: 32px;
+    display: block;
+  }
+
+  /* ── INTRO ── */
+  .intro p {
+    font-family: var(--serif);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--charcoal);
+  }
+
+  .intro p em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  /* ── PROJECTS ── */
+  .project-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .project-item:first-child { border-top: 1px solid var(--rule); }
+
+  .project-name {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.3;
+  }
+
+  .project-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    margin-top: 4px;
+  }
+
+  .project-tag {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--stone);
+    white-space: nowrap;
+  }
+
+  /* ── BACKGROUND ── */
+  .background-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .background-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .background-item:first-child { border-top: 1px solid var(--rule); }
+
+  .bg-name {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal);
+  }
+
+  .bg-location {
+    font-size: 11px;
+    color: var(--stone);
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+
+  .bg-role {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    white-space: nowrap;
+  }
+
+  /* ── SERVICES ── */
+  .services-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--rule);
+  }
+
+  .services-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 15px;
+    color: var(--text);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    line-height: 1.5;
+  }
+
+  .services-list li::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 10px;
+  }
+
+  .service-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    display: block;
+    line-height: 1.7;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 72px 0;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 300;
+    color: var(--charcoal);
+    margin-bottom: 40px;
+    line-height: 1.3;
+  }
+
+  /* ── FORM ── */
+  .form-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .field label {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--linen);
+    padding: 10px 0;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--charcoal);
+    outline: none;
+    width: 100%;
+    transition: border-color 0.25s;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  .field input::placeholder,
+  .field textarea::placeholder { color: var(--linen); }
+
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus { border-bottom-color: var(--charcoal); }
+
+  .field select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6' fill='none' stroke='%23d6d0c8' stroke-width='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+  }
+
+  .field select option { color: var(--charcoal); }
+  .field textarea { resize: none; height: 80px; line-height: 1.6; }
+
+  .btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--charcoal);
+    color: var(--warm-white);
+    border: none;
+    font-family: var(--sans);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 8px;
+  }
+
+  .btn-submit:hover { background: var(--accent); }
+  .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .form-note {
+    font-size: 10px;
+    color: var(--stone);
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-top: 20px;
+    line-height: 1.7;
+  }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 48px 0;
+  }
+
+  .form-success h3 {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+  }
+
+  .form-success p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 32px 0;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 10px;
+    color: var(--linen);
+    letter-spacing: 0.1em;
+  }
+
+  footer a {
+    color: var(--linen);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  footer a:hover { color: var(--stone); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header { animation: fadeUp 0.8s ease forwards; }
+  .section { animation: fadeUp 0.8s ease 0.1s forwards; opacity: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 560px) {
+    header svg { width: 280px; }
+    .form-row { grid-template-columns: 1fr; }
+    .project-item, .background-item { grid-template-columns: 1fr; gap: 4px; }
+    .section-label { font-size: 15px; letter-spacing: 0.1em; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160">
+      <text x="300" y="90" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="68" font-weight="400" fill="#1a1a1a" text-anchor="middle" letter-spacing="-1">LOVELY</text>
+      <line x1="180" y1="103" x2="420" y2="103" stroke="#1a1a1a" stroke-width="0.8"/>
+      <text x="300" y="128" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="13" font-weight="300" fill="#1a1a1a" text-anchor="middle" letter-spacing="9">ANYTIME</text>
+    </svg>
+    <p class="header-sub">Conseil en Hôtellerie<span class="header-sub-sep"> &nbsp;·&nbsp; </span><br class="mobile-break">Provence, France</p>
+    <p style="margin-top:12px;"><a href="index.html" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--stone); text-decoration:none;">EN</a> &nbsp;·&nbsp; <span style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--charcoal);">FR</span></p>
+  </div>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <div class="section intro">
+    <div class="container">
+      <p>Parfois, on a simplement envie de construire quelque chose. <em>Lovely Anytime</em>, c'est mon quelque chose — un petit cabinet de conseil en hôtellerie basé en Provence.</p>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section" id="projects">
+    <div class="container">
+      <span class="section-label">Quelques projets</span>
+      <ul class="project-list">
+        <li class="project-item">
+          <div>
+            <div class="project-name">Domaine de La Cavalerie</div>
+            <div class="project-desc">Ouverture d'un domaine de luxe en Provence</div>
+          </div>
+          <span class="project-tag">Ouverture</span>
+        </li>
+        <li class="project-item">
+          <div>
+            <div class="project-name">Quatre Murs</div>
+            <div class="project-desc">Positionnement de marque et déploiement commercial</div>
+          </div>
+          <span class="project-tag">Marque</span>
+        </li>
+        <li class="project-item">
+          <div>
+            <div class="project-name">Yelloworking</div>
+            <div class="project-desc">Rénovation et repositionnement stratégique</div>
+          </div>
+          <span class="project-tag">Stratégie</span>
+        </li>
+        <li class="project-item">
+          <div>
+            <div class="project-name">Undercover House Provence</div>
+            <div class="project-desc">Négociation de permis et gestion de projet</div>
+          </div>
+          <span class="project-tag">Opérations</span>
+        </li>
+        <li class="project-item">
+          <div>
+            <div class="project-name">Kiss Studio</div>
+            <div class="project-desc">Conseil en concept hôtelier</div>
+          </div>
+          <span class="project-tag">Concept</span>
+        </li>
+        <li class="project-item">
+          <div>
+            <div class="project-name">V______s</div>
+            <div class="project-desc">Gestion de projet pour une marque hôtelière à venir</div>
+          </div>
+          <span class="project-tag">Lancement 2027</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BACKGROUND -->
+  <div class="section" id="background">
+    <div class="container">
+      <span class="section-label">Parcours</span>
+      <p style="font-size:14px; color:var(--text-muted); line-height:1.9; margin-bottom:36px; max-width:52ch;">Une carrière internationale de deux décennies — travaillant en étroite collaboration avec les propriétaires et la direction, notamment en Afrique du Sud, en Jamaïque et aux États-Unis.</p>
+      <ul class="background-list">
+        <li class="background-item">
+          <div>
+            <div class="bg-name">Inverdoorn Game Reserve</div>
+            <div class="bg-location">Afrique du Sud</div>
+          </div>
+          <span class="bg-role">Opérations</span>
+        </li>
+        <li class="background-item">
+          <div>
+            <div class="bg-name">GoldenEye Hotel</div>
+            <div class="bg-location">Jamaïque</div>
+          </div>
+          <span class="bg-role">Restauration</span>
+        </li>
+        <li class="background-item">
+          <div>
+            <div class="bg-name">Island Outpost</div>
+            <div class="bg-location">Jamaïque &amp; Amérique du Nord</div>
+          </div>
+          <span class="bg-role">Ventes & Marketing</span>
+        </li>
+        <li class="background-item">
+          <div>
+            <div class="bg-name">The Standard, High Line</div>
+            <div class="bg-location">New York</div>
+          </div>
+          <span class="bg-role">Contrôle qualité</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="section" id="services">
+    <div class="container">
+      <span class="section-label">Services</span>
+      <ul class="services-list">
+        <li>
+          <div>
+            Développement de concepts restauration
+            <span class="service-note">Travailler avec les parties prenantes pour définir, chiffrer et déployer de nouvelles programmations F&B — du concept et de l'architecture de menu jusqu'à la sélection des fournisseurs et le lancement.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Culture d'entreprise & manuel collaborateur
+            <span class="service-note">Traduire la vision des propriétaires en processus opérationnels concrets — valeurs, standards et attentes quotidiennes, rédigés clairement et conçus pour durer.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Procédures opérationnelles standard
+            <span class="service-note">Rédaction et déploiement de SOP qui alignent les standards de service sur la réalité opérationnelle et les attentes financières. Conçus pour l'équipe qui doit les utiliser.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Formation & développement
+            <span class="service-note">Sessions collectives ou coaching individuel — adaptés à l'établissement, à l'équipe et aux standards visés.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Recrutement
+            <span class="service-note">Recrutement de bout en bout pour les métiers de l'hôtellerie — de la recherche et présélection jusqu'à l'entretien et l'embauche. Trouver des personnes qui correspondent à la culture, pas seulement au poste.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Conseil en technologie & IA
+            <span class="service-note">Audit des systèmes existants, déploiement de nouvelles solutions et construction de cadres pour la transition IA.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- THE PLAYLIST -->
+  <div class="section" id="playlist">
+    <div class="container">
+      <span class="section-label">Carnet</span>
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; border-top:1px solid var(--rule); padding-top:24px; margin-top:0;">
+        <p style="font-family:var(--serif); font-size:20px; font-weight:300; color:var(--charcoal); line-height:1.4; max-width:44ch;">Réflexions sur l'hôtellerie, la culture et les détails qui font ou défont une expérience client.</p>
+        <a href="notebook.html" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--stone); text-decoration:none; white-space:nowrap; transition:color 0.2s;" onmouseover="this.style.color='var(--charcoal)'" onmouseout="this.style.color='var(--stone)'">Read →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA / CONTACT -->
+  <div class="section cta-section" id="contact">
+    <div class="container">
+      <h2>Prenons contact.</h2>
+      <div class="form-wrap">
+        <div id="formBlock">
+          <div class="form-fields">
+            <div class="form-row">
+              <div class="field">
+                <label>Nom complet</label>
+                <input type="text" id="fname" placeholder="Votre nom" autocomplete="name">
+              </div>
+              <div class="field">
+                <label>Société / Entité</label>
+                <input type="text" id="fcompany" placeholder="Nom de la société">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label>Type de bien</label>
+                <select id="fasset">
+                  <option value="" disabled selected>Sélectionner</option>
+                  <option>Hôtel de luxe indépendant</option>
+                  <option>Domaine ou villa privé</option>
+                  <option>Portefeuille hôtelier</option>
+                  <option>Family office</option>
+                  <option>Projet de pré-ouverture</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Localisation</label>
+                <input type="text" id="flocation" placeholder="Pays ou région">
+              </div>
+            </div>
+            <div class="field">
+              <label>Description</label>
+              <textarea id="fdesc" placeholder="Parlez-moi de votre projet."></textarea>
+            </div>
+            <div class="field">
+              <label>Adresse email</label>
+              <input type="email" id="femail" placeholder="votre@email.com" autocomplete="email">
+            </div>
+            <button class="btn-submit" id="submitBtn" type="button">Envoyer</button>
+            <p class="form-note">Toutes les demandes sont traitées avec discrétion.</p>
+          </div>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <h3>Message reçu.</h3>
+          <p>Merci. Je reviendrai vers vous rapidement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Lovely Anytime &nbsp;·&nbsp; Mark Collins &nbsp;·&nbsp; <a href="notebook.html">Carnet</a> &nbsp;·&nbsp; <a href="#" onclick="showPrivacy()">Politique de confidentialité</a></p>
+  </div>
+</footer>
+
+<!-- PRIVACY POLICY MODAL -->
+<div id="privacyModal" style="display:none; position:fixed; inset:0; background:rgba(250,248,245,0.98); z-index:500; overflow-y:auto; padding:60px 24px;">
+  <div style="max-width:640px; margin:0 auto;">
+    <button onclick="hidePrivacy()" style="background:none; border:none; font-family:var(--sans); font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); cursor:pointer; margin-bottom:48px; padding:0;">← Retour</button>
+    <p style="font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); margin-bottom:16px;">Politique de confidentialité</p>
+    <div style="width:36px; height:1px; background:var(--accent); margin-bottom:32px;"></div>
+    <h1 style="font-family:var(--serif); font-size:36px; font-weight:300; color:var(--charcoal); margin-bottom:40px; line-height:1.1;">Politique de confidentialité</h1>
+    <p style="font-size:12px; color:var(--stone); margin-bottom:40px; letter-spacing:0.04em;">Dernière mise à jour : mars 2025</p>
+    <div style="display:flex; flex-direction:column; gap:36px;">
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">1. Qui sommes-nous</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Ce site est géré par Mark Collins, sous le nom commercial Lovely Anytime. Pour toute question relative à la confidentialité, contactez : <a href="/cdn-cgi/l/email-protection#7815121e561b17141411160b381f15191114561b1715" style="color:var(--charcoal);"><span class="__cf_email__" data-cfemail="1a77707c34797576767374695a7d777b737634797577">[email&#160;protected]</span></a></p>
+      </div>
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">2. Données collectées</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Lorsque vous soumettez une demande, nous collectons votre nom, votre adresse email et le message fourni. Aucune autre donnée n'est collectée. Nous n'utilisons pas de cookies, scripts de suivi ni outils d'analyse.</p>
+      </div>
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">3. Utilisation des données</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Vos données sont utilisées uniquement pour répondre à votre demande. Elles ne sont pas utilisées à des fins de marketing ou de profilage.</p>
+      </div>
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">4. Tiers</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Les données sont traitées par Formspree (formspree.io) dans le seul but d'acheminer votre message. Vos données ne sont jamais vendues ni partagées.</p>
+      </div>
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">5. Conservation des données</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Vos données sont conservées uniquement le temps nécessaire. En l'absence de collaboration, elles sont supprimées dans les 12 mois suivant le premier contact.</p>
+      </div>
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">6. Vos droits</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Conformément au RGPD, vous disposez du droit d'accéder à vos données, de les corriger ou d'en demander la suppression. Contactez <a href="/cdn-cgi/l/email-protection#325f58541c515d5e5e5b5c4172555f535b5e1c515d5f" style="color:var(--charcoal);"><span class="__cf_email__" data-cfemail="8ce1e6eaa2efe3e0e0e5e2ffccebe1ede5e0a2efe3e1">[email&#160;protected]</span></a> et nous vous répondrons dans les 30 jours.</p>
+      </div>
+      <div>
+        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">7. Modifications</h2>
+        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Cette politique peut être mise à jour périodiquement. Toute modification sera reflétée sur cette page.</p>
+      </div>
+    </div>
+    <div style="margin-top:60px; padding-top:32px; border-top:1px solid var(--rule);">
+      <button onclick="hidePrivacy()" style="background:none; border:none; font-family:var(--sans); font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); cursor:pointer; padding:0;">← Retour au site</button>
+    </div>
+  </div>
+</div>
+
+<script data-cfasync="false">
+  document.getElementById('submitBtn').addEventListener('click', submitForm);
+
+  async function submitForm() {
+    const name  = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    if (!name || !email) { alert('Veuillez indiquer votre nom et votre adresse email.'); return; }
+
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Envoi…';
+    btn.disabled = true;
+
+    const data = {
+      name,
+      email,
+      company:     document.getElementById('fcompany').value.trim(),
+      asset:       document.getElementById('fasset').value,
+      location:    document.getElementById('flocation').value.trim(),
+      description: document.getElementById('fdesc').value.trim()
+    };
+
+    try {
+      const res = await fetch('https://formspree.io/f/mvzbelwp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) {
+        document.getElementById('formBlock').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.textContent = 'Envoyer';
+        btn.disabled = false;
+        alert('Une erreur est survenue. Veuillez écrire à mark@lovelyanytime.com.');
+      }
+    } catch(e) {
+      btn.textContent = 'Envoyer';
+      btn.disabled = false;
+      alert('Erreur de connexion. Veuillez écrire à mark@lovelyanytime.com.');
+    }
+  }
+
+  function showPrivacy() {
+    document.getElementById('privacyModal').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+
+  function hidePrivacy() {
+    document.getElementById('privacyModal').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
