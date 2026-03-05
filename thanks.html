@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — Lovely Anytime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --charcoal: #1c1c1a;
+    --warm-white: #faf8f5;
+    --stone: #a89f95;
+    --linen: #d6d0c8;
+    --accent: #8b7355;
+    --text-muted: #7a7570;
+    --rule: rgba(168,159,149,0.22);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--warm-white);
+    font-family: var(--sans);
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  svg { width: 380px; height: auto; margin-bottom: 48px; }
+  h1 {
+    font-family: var(--serif);
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+  }
+  p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  a {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone);
+    text-decoration: none;
+    border-bottom: 1px solid var(--linen);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  a:hover { color: var(--charcoal); }
+</style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160">
+    <text x="300" y="90" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="68" font-weight="400" fill="#1a1a1a" text-anchor="middle" letter-spacing="-1">LOVELY</text>
+    <line x1="180" y1="103" x2="420" y2="103" stroke="#1a1a1a" stroke-width="0.8"/>
+    <text x="300" y="128" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="13" font-weight="300" fill="#1a1a1a" text-anchor="middle" letter-spacing="9">ANYTIME</text>
+  </svg>
+  <h1>Message received.</h1>
+  <p>Thank you. I'll be in touch shortly.</p>
+  <a href="/">← Back to site</a>
+</body>
+</html>
