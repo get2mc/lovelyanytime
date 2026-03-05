@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notebook — Lovely Anytime</title>
+<meta name="description" content="Musings on hospitality, culture, and the details that make or break a guest experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0d0d0b;
+    --charcoal: #1c1c1a;
+    --warm-white: #faf8f5;
+    --off-white: #f2efe9;
+    --stone: #a89f95;
+    --linen: #d6d0c8;
+    --accent: #8b7355;
+    --text: #3a3834;
+    --text-muted: #7a7570;
+    --rule: rgba(168,159,149,0.22);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 56px 0 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .header-logo svg {
+    width: 140px;
+    height: auto;
+    display: block;
+  }
+
+  .header-back {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .header-back:hover { color: var(--charcoal); }
+
+  /* ── PAGE TITLE ── */
+  .page-title {
+    padding: 64px 0 0;
+  }
+
+  .page-label {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .page-title h1 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+
+  .page-title p {
+    font-size: 13px;
+    color: var(--stone);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+    max-width: 44ch;
+    margin-bottom: 48px;
+  }
+
+  /* ── POST LIST ── */
+  .post-list {
+    list-style: none;
+    border-top: 1px solid var(--rule);
+    margin-bottom: 80px;
+  }
+
+  .post-list li {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .post-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .post-link:hover .post-title { color: var(--accent); }
+  .post-link:hover .post-arrow { transform: translateX(4px); color: var(--accent); }
+
+  .post-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.3;
+    transition: color 0.2s;
+  }
+
+  .post-arrow {
+    font-size: 18px;
+    color: var(--linen);
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  /* ── SINGLE POST ── */
+  .post-view {
+    display: none;
+    padding: 64px 0 80px;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .post-view.active { display: block; }
+
+  .post-back {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+    font-family: var(--sans);
+  }
+
+  .post-back:hover { color: var(--charcoal); }
+
+  .post-header {
+    margin-bottom: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .post-header h1 {
+    font-family: var(--serif);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .post-header p {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  .post-body {
+    font-size: 16px;
+    line-height: 1.95;
+    color: var(--text);
+  }
+
+  .post-body p {
+    margin-bottom: 28px;
+    max-width: 62ch;
+  }
+
+  .post-body p:last-child { margin-bottom: 0; }
+
+  .post-body h2 {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin: 48px 0 16px;
+    line-height: 1.2;
+  }
+
+  .post-body blockquote {
+    border-left: 2px solid var(--accent);
+    padding: 4px 0 4px 24px;
+    margin: 40px 0;
+  }
+
+  .post-body blockquote p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.55;
+    max-width: none;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 32px 0;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 10px;
+    color: var(--linen);
+    letter-spacing: 0.1em;
+  }
+
+  footer a {
+    color: var(--linen);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  footer a:hover { color: var(--stone); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 560px) {
+    .container { padding: 0 20px; }
+    header { padding: 40px 0 36px; }
+    .header-logo svg { width: 110px; }
+    .page-title { padding: 48px 0 0; }
+    .post-title { font-size: 18px; }
+    .post-body { font-size: 15px; }
+    .post-body blockquote p { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo" style="text-decoration:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160">
+          <text x="300" y="90" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="68" font-weight="400" fill="#1a1a1a" text-anchor="middle" letter-spacing="-1">LOVELY</text>
+          <line x1="180" y1="103" x2="420" y2="103" stroke="#1a1a1a" stroke-width="0.8"/>
+          <text x="300" y="128" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="13" font-weight="300" fill="#1a1a1a" text-anchor="middle" letter-spacing="9">ANYTIME</text>
+        </svg>
+      </a>
+      <a href="index.html" class="header-back">← Back to site</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <!-- LIST VIEW -->
+    <div id="listView">
+      <div class="page-title">
+        <span class="page-label">Notebook</span>
+        <h1>Musings on hospitality, culture, and the details that make or break a guest experience.</h1>
+        <p>By Mark Collins</p>
+      </div>
+
+      <ul class="post-list">
+        <li>
+          <div class="post-link" onclick="showPost('post1')">
+            <span class="post-title">Sound is not background. It's hospitality.</span>
+            <span class="post-arrow">→</span>
+          </div>
+        </li>
+        <!-- Add future posts here -->
+      </ul>
+    </div>
+
+    <!-- POST 1: Sound is not background -->
+    <div class="post-view" id="post1">
+      <button class="post-back" onclick="showList()">← Notebook</button>
+      <div class="post-header">
+        <h1>Sound is not background.<br>It's hospitality.</h1>
+        <p>Mark Collins &nbsp;·&nbsp; Lovely Anytime</p>
+      </div>
+      <div class="post-body">
+
+        <p>There is a problem spreading through bars and restaurants in France, and it has nothing to do with the food or the service. It is the playlist. Specifically, the cover playlist — that endless rotation of familiar songs stripped of their original energy, repackaged into something smooth, inoffensive, and completely forgettable.</p>
+
+        <p>Walk into almost any wine bar, brasserie, or hotel lobby in Provence right now and you will hear it. A breathy acoustic version of something that was once urgent. A lounge remix of a song that used to mean something. Background music designed not to disturb — and in achieving that goal, it disturbs everything.</p>
+
+        <blockquote>
+          <p>The room feels the same at noon as it does at midnight. That is not ambiance. That is wallpaper.</p>
+        </blockquote>
+
+        <p>Creating the right environment is not only touch and feel and smell and taste. It is also sound. And sound is not a playlist you set once and forget. It is a living, moving element of the guest experience — one that should evolve through the day the way light does, the way the crowd does, the way the energy in a room shifts from the quiet of an early lunch service to the heat of a full evening.</p>
+
+        <p>A good morning service calls for something unhurried. Space between notes. Music that doesn't ask anything of the guest. By mid-afternoon, as the room fills and conversation picks up, the tempo can rise — subtly, naturally, the way a good sommelier reads a table. By evening, especially on a Friday, the music should carry the room forward. It should feel intentional. Curated. Like someone in the building actually cares.</p>
+
+        <h2>The cover problem</h2>
+
+        <p>The reason cover playlists have taken hold is convenience. Licensing original music is complicated and sometimes costly. Cover libraries sidestep that. But the cost paid elsewhere — in atmosphere, in distinctiveness, in the feeling a guest takes home with them — is far higher than any licensing fee.</p>
+
+        <p>Guests don't always know why they feel a certain way in a space. They can't always name it. But they feel it. They feel the difference between a room that has been thought about and one that hasn't. Music is one of the most immediate signals a space sends — and right now, too many spaces in France are sending the wrong one.</p>
+
+        <h2>What to do instead</h2>
+
+        <p>Build your own library. It takes time, but it is not complicated. Start with the feeling you want at each moment of the day and work backwards. Morning: what does calm, unhurried, and slightly warm sound like to you? Evening on a busy Saturday: what carries energy without aggression? The answers are personal — and that is the point. A playlist that reflects the identity of a place is one of the cheapest and most powerful branding tools available.</p>
+
+        <p>Vary the tempo deliberately. Not randomly — deliberately. Think of the arc of a day in your space and build music that moves with it. Assign someone ownership of it. Not as a task, but as a craft.</p>
+
+        <p>And please. Retire the covers.</p>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Lovely Anytime &nbsp;·&nbsp; <a href="index.html">Back to site</a> &nbsp;·&nbsp; <a href="index.html#contact">Get in touch</a></p>
+  </div>
+</footer>
+
+<script>
+  function showPost(id) {
+    document.getElementById('listView').style.display = 'none';
+    document.querySelectorAll('.post-view').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showList() {
+    document.querySelectorAll('.post-view').forEach(p => p.classList.remove('active'));
+    document.getElementById('listView').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Check URL hash on load for direct linking
+  if (window.location.hash) {
+    const id = window.location.hash.replace('#', '');
+    if (document.getElementById(id)) showPost(id);
+  }
+</script>
+
+</body>
+</html>
