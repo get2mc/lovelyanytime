@@ -650,4 +650,21 @@
         alert('Something went wrong. Please email mjf.collins@gmail.com directly.');
       }
     } catch(e) {
-      btn.textContent = 'G
+      btn.textContent = 'Get in Touch';
+      btn.disabled = false;
+      alert('Connection error. Please email mjf.collins@gmail.com directly.');
+    }
+  }
+
+  function showPrivacy() {
+    document.getElementById('privacyModal').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+
+  function hidePrivacy() {
+    document.getElementById('privacyModal').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
