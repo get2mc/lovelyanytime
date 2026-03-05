@@ -514,21 +514,22 @@
     <div class="container">
       <h2>Get in touch.</h2>
       <div class="form-wrap">
-        <form class="form-fields" action="https://formspree.io/f/mvzbelwp" method="POST">
+        <div id="formBlock">
+          <div class="form-fields">
             <div class="form-row">
               <div class="field">
                 <label>Full Name</label>
-                <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+                <input type="text" id="fname" placeholder="Your name" autocomplete="name">
               </div>
               <div class="field">
                 <label>Company / Entity</label>
-                <input type="text" name="company" placeholder="Company name">
+                <input type="text" id="fcompany" placeholder="Company name">
               </div>
             </div>
             <div class="form-row">
               <div class="field">
                 <label>Asset Type</label>
-                <select name="asset">
+                <select id="fasset">
                   <option value="" disabled selected>Select type</option>
                   <option>Independent luxury hotel</option>
                   <option>Private estate or villa</option>
@@ -540,21 +541,25 @@
               </div>
               <div class="field">
                 <label>Location</label>
-                <input type="text" name="location" placeholder="Country or region">
+                <input type="text" id="flocation" placeholder="Country or region">
               </div>
             </div>
             <div class="field">
               <label>Brief Description</label>
-              <textarea name="description" placeholder="Tell me about your project."></textarea>
+              <textarea id="fdesc" placeholder="Tell me about your project."></textarea>
             </div>
             <div class="field">
               <label>Email Address</label>
-              <input type="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+              <input type="email" id="femail" placeholder="your@email.com" autocomplete="email">
             </div>
-            <input type="hidden" name="_next" value="https://lovelyanytime.com/thanks.html">
-            <button class="btn-submit" type="submit">Get in Touch</button>
+            <button class="btn-submit" id="submitBtn" type="button">Get in Touch</button>
             <p class="form-note">All enquiries handled with discretion.</p>
-        </form>
+          </div>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <h3>Message received.</h3>
+          <p>Thank you. I'll be in touch shortly.</p>
+        </div>
       </div>
     </div>
   </div>
