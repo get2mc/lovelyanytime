@@ -518,17 +518,39 @@
           <div class="form-fields">
             <div class="form-row">
               <div class="field">
-                <label>Name</label>
+                <label>Full Name</label>
                 <input type="text" id="fname" placeholder="Your name" autocomplete="name">
               </div>
               <div class="field">
-                <label>Email</label>
-                <input type="email" id="femail" placeholder="your@email.com" autocomplete="email">
+                <label>Company / Entity</label>
+                <input type="text" id="fcompany" placeholder="Company name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label>Asset Type</label>
+                <select id="fasset">
+                  <option value="" disabled selected>Select type</option>
+                  <option>Independent luxury hotel</option>
+                  <option>Private estate or villa</option>
+                  <option>Hospitality investment portfolio</option>
+                  <option>Family office</option>
+                  <option>Pre-opening project</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Location</label>
+                <input type="text" id="flocation" placeholder="Country or region">
               </div>
             </div>
             <div class="field">
-              <label>Message</label>
+              <label>Brief Description</label>
               <textarea id="fdesc" placeholder="Tell me about your project."></textarea>
+            </div>
+            <div class="field">
+              <label>Email Address</label>
+              <input type="email" id="femail" placeholder="your@email.com" autocomplete="email">
             </div>
             <button class="btn-submit" id="submitBtn" onclick="submitForm()">Get in Touch</button>
             <p class="form-note">All enquiries handled with discretion.</p>
@@ -607,7 +629,10 @@
     const data = {
       name,
       email,
-      message: document.getElementById('fdesc').value.trim()
+      company:     document.getElementById('fcompany').value.trim(),
+      asset:       document.getElementById('fasset').value,
+      location:    document.getElementById('flocation').value.trim(),
+      description: document.getElementById('fdesc').value.trim()
     };
 
     try {
