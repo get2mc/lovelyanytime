@@ -75,11 +75,11 @@
   .section:last-of-type { border-bottom: none; }
 
   .section-label {
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 400;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--stone);
+    color: var(--charcoal);
     margin-bottom: 32px;
     display: block;
   }
@@ -162,6 +162,13 @@
     font-size: 18px;
     font-weight: 400;
     color: var(--charcoal);
+  }
+
+  .bg-location {
+    font-size: 11px;
+    color: var(--stone);
+    letter-spacing: 0.04em;
+    margin-top: 2px;
   }
 
   .bg-role {
@@ -456,22 +463,34 @@
   <div class="section" id="background">
     <div class="container">
       <span class="section-label">A bit of background</span>
-      <p style="font-size:14px; color:var(--text-muted); line-height:1.9; margin-bottom:36px; max-width:52ch;">An international career spanning two decades — from South Africa to Jamaica and the United States.</p>
+      <p style="font-size:14px; color:var(--text-muted); line-height:1.9; margin-bottom:36px; max-width:52ch;">An international career spanning two decades — working closely with owners and senior management, notably in South Africa, Jamaica and the United States.</p>
       <ul class="background-list">
         <li class="background-item">
-          <span class="bg-name">Inverdoorn Game Reserve</span>
+          <div>
+            <div class="bg-name">Inverdoorn Game Reserve</div>
+            <div class="bg-location">South Africa</div>
+          </div>
           <span class="bg-role">Operations</span>
         </li>
         <li class="background-item">
-          <span class="bg-name">GoldenEye Hotel</span>
+          <div>
+            <div class="bg-name">GoldenEye Hotel</div>
+            <div class="bg-location">Jamaica</div>
+          </div>
           <span class="bg-role">Food & Beverage</span>
         </li>
         <li class="background-item">
-          <span class="bg-name">Island Outpost</span>
+          <div>
+            <div class="bg-name">Island Outpost</div>
+            <div class="bg-location">Jamaica &amp; North America</div>
+          </div>
           <span class="bg-role">Sales & Marketing</span>
         </li>
         <li class="background-item">
-          <span class="bg-name">The Standard</span>
+          <div>
+            <div class="bg-name">The Standard, High Line</div>
+            <div class="bg-location">New York City</div>
+          </div>
           <span class="bg-role">Quality Control</span>
         </li>
       </ul>
@@ -483,11 +502,36 @@
     <div class="container">
       <span class="section-label">Services</span>
       <ul class="services-list">
-        <li>Food & beverage concept development</li>
-        <li>Employee culture and company handbook creation</li>
-        <li>Standard operating procedures — writing and deployment</li>
-        <li>Training and development programmes</li>
-        <li>Recruitment</li>
+        <li>
+          <div>
+            Food & beverage concept development
+            <span class="service-note">Working with stakeholders to define, cost and deploy new F&B programming — from concept and menu architecture to supplier selection and launch.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Employee culture & company handbook
+            <span class="service-note">Translating ownership's vision into actionable operational workflows — values, standards, and day-to-day expectations, written clearly and built to last.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Standard operating procedures
+            <span class="service-note">Writing and deploying SOPs that align service standards with operational reality and financial expectations. Built for the team that has to use them.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Training & development
+            <span class="service-note">Group sessions or one-on-one coaching — tailored to the property, the team, and the standards you're working towards.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            Recruitment
+            <span class="service-note">End-to-end recruitment for hospitality roles — from search and shortlisting through to interview and hiring. Finding people who fit the culture, not just the job description.</span>
+          </div>
+        </li>
         <li>
           <div>
             Technology & AI advisory
