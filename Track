@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vilajoun 90</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vilajoun 90">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1C1A16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF6EC;
+  --paper:#F2EDDF;
+  --ink:#1C1A16;
+  --ink-soft:#57503F;
+  --olive:#5A6340;
+  --amber:#B5822E;
+  --line:#D9D2BE;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  padding-bottom:90px;
+  padding-top:env(safe-area-inset-top);
+}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+header{padding:28px 0 18px;border-bottom:1px solid var(--ink)}
+.brand{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
+h1{font-family:'DM Serif Display',serif;font-size:34px;line-height:1.1;margin-top:6px}
+.dateline{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;font-size:13px;color:var(--ink-soft)}
+.daycount{font-family:'DM Serif Display',serif;font-size:15px;color:var(--ink)}
+.season-bar{height:3px;background:var(--line);margin-top:10px;position:relative}
+.season-bar span{position:absolute;left:0;top:0;bottom:0;background:var(--olive)}
+.phase-tag{display:inline-block;margin-top:12px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);background:var(--olive);padding:4px 10px}
+
+/* ---------- today card ---------- */
+.today{background:var(--ink);color:var(--cream);margin-top:22px;padding:22px 20px 24px}
+.today .eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--amber)}
+.today h2{font-family:'DM Serif Display',serif;font-size:24px;margin-top:6px;line-height:1.2}
+.today .mission-note{font-size:14px;line-height:1.5;color:#CFC8B4;margin-top:8px}
+.focus-box{border:1px solid #3A362C;margin-top:16px;padding:14px}
+.focus-box .lbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8A8474}
+.focus-box p{font-size:14px;line-height:1.5;margin-top:6px}
+
+/* ---------- checklists ---------- */
+.check{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid #35312778;cursor:pointer;user-select:none}
+.check:last-child{border-bottom:none}
+.box{flex:0 0 20px;height:20px;border:1.5px solid #8A8474;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--amber)}
+.check.done .box{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.check .txt{font-size:14px;line-height:1.45}
+.check.done .txt{opacity:.42;text-decoration:line-through}
+.check .txt b{font-weight:700}
+.light .check{border-bottom:1px solid var(--line)}
+.light .box{border-color:var(--ink-soft);color:var(--olive)}
+.light .check.done .box{background:var(--olive);border-color:var(--olive);color:var(--cream)}
+.rituals-title{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#8A8474;margin:20px 0 4px}
+.streak{font-size:12px;color:#8A8474;margin-top:14px;text-align:right}
+
+/* ---------- sections ---------- */
+section{margin-top:34px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:8px}
+.sec-head h3{font-family:'DM Serif Display',serif;font-size:21px}
+.sec-head .tag{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* week mission */
+.week-card{background:var(--paper);padding:18px;margin-top:14px}
+.week-card .wk{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);font-weight:700}
+.week-card h4{font-family:'DM Serif Display',serif;font-size:19px;margin-top:4px}
+.week-card .why{font-size:13px;color:var(--ink-soft);line-height:1.5;margin-top:6px;font-style:italic}
+.week-nav{display:flex;justify-content:space-between;margin-top:12px}
+.week-nav button{font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--ink);padding:7px 14px;cursor:pointer;color:var(--ink)}
+.week-nav button:disabled{opacity:.25}
+.week-nav .now{border:none;color:var(--olive);font-weight:700}
+
+/* cadence */
+.cad{border-bottom:1px solid var(--line);padding:13px 0;display:flex;gap:14px}
+.cad:last-child{border-bottom:none}
+.cad .d{font-family:'DM Serif Display',serif;font-size:15px;flex:0 0 44px;color:var(--ink-soft)}
+.cad.today-row .d{color:var(--amber)}
+.cad.today-row{background:linear-gradient(90deg,#B5822E14,transparent)}
+.cad .body{font-size:14px;line-height:1.5}
+.cad .body b{font-weight:700}
+.cad .body small{display:block;color:var(--ink-soft);margin-top:2px;font-size:12.5px}
+
+/* phases */
+.phase{padding:16px 0;border-bottom:1px solid var(--line)}
+.phase:last-child{border-bottom:none}
+.phase h4{font-family:'DM Serif Display',serif;font-size:18px}
+.phase .rng{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--olive);font-weight:700}
+.phase p{font-size:14px;color:var(--ink-soft);line-height:1.55;margin-top:6px}
+
+/* kpi */
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:14px}
+.kpi div{background:var(--cream);padding:14px}
+.kpi .n{font-family:'DM Serif Display',serif;font-size:22px}
+.kpi .l{font-size:11.5px;color:var(--ink-soft);margin-top:3px;line-height:1.35}
+
+footer{margin-top:44px;padding:20px 0 10px;border-top:1px solid var(--ink);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);display:flex;justify-content:space-between}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">Hôtel Vilajoun · Saison 2026</div>
+  <h1>Le Plan 90 Jours</h1>
+  <div class="dateline">
+    <span id="today-date">—</span>
+    <span class="daycount" id="day-count">—</span>
+  </div>
+  <div class="season-bar"><span id="season-progress"></span></div>
+  <div class="phase-tag" id="phase-tag">—</div>
+</header>
+
+<!-- TODAY -->
+<div class="today" id="today-card">
+  <div class="eyebrow" id="today-eyebrow">Aujourd'hui</div>
+  <h2 id="today-cadence-title">—</h2>
+  <p class="mission-note" id="today-cadence-body">—</p>
+  <div class="focus-box">
+    <div class="lbl">Mission de la semaine</div>
+    <p id="today-week-mission">—</p>
+  </div>
+  <div class="rituals-title">Rituels quotidiens — non négociables</div>
+  <div id="rituals"></div>
+  <div class="streak" id="streak">—</div>
+</div>
+
+<!-- WEEK MISSION DETAIL -->
+<section>
+  <div class="sec-head"><h3>Mission de la semaine</h3><span class="tag" id="week-range">—</span></div>
+  <div class="week-card">
+    <div class="wk" id="wk-num">—</div>
+    <h4 id="wk-title">—</h4>
+    <p class="why" id="wk-why">—</p>
+    <div class="light" id="wk-actions" style="margin-top:10px"></div>
+  </div>
+  <div class="week-nav">
+    <button id="prev-wk">← Préc.</button>
+    <button class="now" id="now-wk">Cette semaine</button>
+    <button id="next-wk">Suiv. →</button>
+  </div>
+</section>
+
+<!-- CADENCE -->
+<section>
+  <div class="sec-head"><h3>La cadence hebdo</h3><span class="tag">Chaque semaine, même rythme</span></div>
+  <div id="cadence"></div>
+</section>
+
+<!-- PHASES -->
+<section>
+  <div class="sec-head"><h3>Les trois actes</h3><span class="tag">Juil → Sept</span></div>
+  <div class="phase">
+    <div class="rng">Acte I · 1–31 juillet</div>
+    <h4>Verrouiller la machine</h4>
+    <p>Fixer les cibles avec Antoine, monter la machine de vente directe, fermer le planning d'août, sécuriser les marges F&B. Tout ce qui n'est pas verrouillé en juillet devient une crise en août.</p>
+  </div>
+  <div class="phase">
+    <div class="rng">Acte II · 1–31 août</div>
+    <h4>Tenir sous pression</h4>
+    <p>Zéro remise, zéro improvisation. Protéger l'équipe (la fatigue d'août tue les saisons), tenir la qualité guest, lancer septembre pendant que tout le monde regarde ailleurs.</p>
+  </div>
+  <div class="phase">
+    <div class="rng">Acte III · 1–30 septembre</div>
+    <h4>Construire le dossier</h4>
+    <p>Pivoter vers l'arrière-saison (vendanges, long séjour, clientèle locale) et assembler le dossier Ops Director : chiffres tenus, SOPs construits, scores en hausse, zéro incident conformité. Fin septembre, le poste groupe est une formalité.</p>
+  </div>
+</section>
+
+<!-- KPI -->
+<section>
+  <div class="sec-head"><h3>Les chiffres qui comptent</h3><span class="tag">À tenir au 30 sept</span></div>
+  <div class="kpi">
+    <div><div class="n">≤ __ %</div><div class="l">Masse salariale / CA — à fixer avec Antoine, semaine 1</div></div>
+    <div><div class="n">≥ 60 %</div><div class="l">Capture F&B : clients hébergés qui dînent à L'Agachoun</div></div>
+    <div><div class="n">+ 5 pts</div><div class="l">Part de réservations directes vs début juillet</div></div>
+    <div><div class="n">≥ __ %</div><div class="l">Plancher d'occupation septembre — à fixer semaine 1</div></div>
+    <div><div class="n">&lt; 48 h</div><div class="l">Délai de réponse à chaque avis, sans exception</div></div>
+    <div><div class="n">0</div><div class="l">Incident conformité (Urssaf, DUERP, piscine, affichage)</div></div>
+  </div>
+</section>
+
+<footer><span>Vilajoun 90</span><span>MC · Joucas</span></footer>
+</div>
+
+<script>
+/* ---------- safe storage (persists on device; in-memory fallback in preview) ---------- */
+const mem = {};
+const store = {
+  get(k){ try{ return localStorage.getItem(k) ?? mem[k] ?? null }catch(e){ return mem[k] ?? null } },
+  set(k,v){ mem[k]=v; try{ localStorage.setItem(k,v) }catch(e){} }
+};
+
+/* ---------- season math ---------- */
+const START = new Date(2026,6,1);   // 1 July 2026
+const END   = new Date(2026,8,30);  // 30 Sept 2026
+const now = new Date();
+const today = new Date(now.getFullYear(),now.getMonth(),now.getDate());
+const clamp = new Date(Math.min(Math.max(today,START),END));
+const dayNum = Math.floor((clamp-START)/86400000)+1;
+const totalDays = Math.floor((END-START)/86400000)+1;
+const weekNum = Math.min(13, Math.ceil(dayNum/7));
+const dow = clamp.getDay(); // 0=Sun
+const dateKey = clamp.toISOString().slice(0,10);
+
+const FR_DAYS=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+const FR_MONTHS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+document.getElementById('today-date').textContent =
+  FR_DAYS[dow]+' '+clamp.getDate()+' '+FR_MONTHS[clamp.getMonth()];
+document.getElementById('day-count').textContent = 'Jour '+dayNum+' / '+totalDays;
+document.getElementById('season-progress').style.width = (dayNum/totalDays*100)+'%';
+const phase = clamp.getMonth()===6 ? 'Acte I — Verrouiller la machine'
+            : clamp.getMonth()===7 ? 'Acte II — Tenir sous pression'
+            : 'Acte III — Construire le dossier';
+document.getElementById('phase-tag').textContent = phase;
+
+/* ---------- daily rituals ---------- */
+const RITUALS = [
+  {t:"<b>07h30 — Tour de propriété.</b> Piscine (registre signé), terrasses, première impression client. 15 min, œil de client, pas de GM."},
+  {t:"<b>Les chiffres en 5 min.</b> Occupation de la veille, ADR, couverts Agachoun + Petit Café, pickup 7 jours. Noter, pas seulement regarder."},
+  {t:"<b>Capture F&B.</b> % des clients hébergés qui ont dîné sur place hier soir. Sous 60 % = pourquoi, nommément."},
+  {t:"<b>Avis clients.</b> Répondre à tout avis de moins de 48 h. Chaleureux, bref, jamais répétitif. « Bien à vous » / « Best regards »."},
+  {t:"<b>Un contact d'équipe.</b> Une personne, par son prénom, une reconnaissance sincère ou un vrai check-in. Pas en passant."},
+  {t:"<b>Fin de journée.</b> Feuille de caisse signée, arrivées de demain scannées (VIP, upsell dîner, occasions spéciales)."}
+];
+
+/* ---------- weekly cadence ---------- */
+const CADENCE = [
+  {d:'Lun', t:"<b>Revue chiffres vs budget.</b>", s:"Masse salariale en % du CA, occupation, ADR, couverts. Fixer les 3 priorités de la semaine. 45 min max, seul, avant que l'hôtel se réveille."},
+  {d:'Mar', t:"<b>Deep dive F&B avec Jenna et la cuisine.</b>", s:"Plats stars / plats morts, gaspillage, marges cocktails (×3 HT tenu ?). Une décision par semaine : un plat sort, un prix bouge, ou rien — mais décidé."},
+  {d:'Mer', t:"<b>Pouls RH.</b>", s:"Brouillon Skello semaine suivante, heures et repos conformes CCN HCR, radar « risque de départ ». Un point Élodie/InExtenso si contrat ou solde en cours."},
+  {d:'Jeu', t:"<b>La page Antoine.</b>", s:"Une page : chiffres vs budget, un problème résolu cette semaine, une décision requise. C'est la pièce à conviction du dossier Ops Director — chaque jeudi, sans exception."},
+  {d:'Ven', t:"<b>Audit expérience client.</b>", s:"Tester un point de contact en client mystère : check-in, petit-déj, bar, réservation téléphone. Un point de friction identifié, corrigé sous 7 jours."},
+  {d:'Sam', t:"<b>Journée revenue.</b>", s:"Pickup 21 jours, tenue des tarifs (zéro remise juil-août), part du direct. Chaque départ du jour repart avec l'accroche « réservez en direct la prochaine fois »."},
+  {d:'Dim', t:"<b>Reset 30 minutes.</b>", s:"Inbox à zéro, aperçu de la semaine, puis une heure vraiment off. Un GM cramé en août ne construit pas de dossier en septembre."}
+];
+// order Mon-Sun for display
+const cadEl = document.getElementById('cadence');
+const order=[1,2,3,4,5,6,0];
+order.forEach((idx,i)=>{
+  const c = CADENCE[i];
+  const row=document.createElement('div');
+  row.className='cad'+(idx===dow?' today-row':'');
+  row.innerHTML='<div class="d">'+c.d+'</div><div class="body">'+c.t+'<small>'+c.s+'</small></div>';
+  cadEl.appendChild(row);
+});
+const todayCad = CADENCE[order.indexOf(dow)];
+document.getElementById('today-cadence-title').innerHTML = todayCad.t.replace(/<\/?b>/g,'');
+document.getElementById('today-cadence-body').textContent = todayCad.s;
+
+/* ---------- 13 weekly missions ---------- */
+const WEEKS = [
+ {r:"1–5 juil", t:"Semaine zéro : fixer les règles du jeu", w:"Sans cibles chiffrées signées avec Antoine, la saison se pilote à l'instinct — et le dossier Ops Director n'existe pas.",
+  a:["Réunion Antoine : verrouiller les 4 cibles (masse salariale %, capture F&B 60 %, direct +5 pts, plancher occupation sept). Par écrit.",
+     "Créer la feuille de suivi capture F&B (par nuit : clients hébergés / couverts hébergés).",
+     "Annoncer à l'équipe : demandes de congés d'août fermées au 15 juillet.",
+     "Vérifier la base de départ : part actuelle du direct dans Misterbooking, scores Google/Booking notés noir sur blanc.",
+     "Brief équipe de 20 min : le plan des 90 jours, les 3 chiffres que tout le monde connaît par cœur."]},
+ {r:"6–12 juil", t:"La machine de vente directe", w:"Chaque réservation OTA reconquise vaut 15–20 % de marge. C'est le levier le plus rentable de l'été.",
+  a:["Écrire le script de départ : chaque client OTA repart avec la carte « réservez en direct » + avantage concret (early check-in, apéritif offert).",
+     "Email pré-arrivée systématique : bienvenue + proposition de réservation dîner Agachoun (c'est aussi la capture F&B).",
+     "Capture d'email à 100 % au check-in — vérifier le process réception avec l'équipe.",
+     "Contrôle Misterbooking : parité tarifaire OK mais avantage direct visible sur le site.",
+     "Former Zoé/Cassandra au pitch dîner du check-in : deux phrases, pas un discours."]},
+ {r:"13–19 juil", t:"Verrouiller août avant qu'août n'arrive", w:"Un CDD qui part en août coûte plus cher que n'importe quelle prime. La rétention se joue maintenant.",
+  a:["15 juillet : congés d'août gelés, planning Skello d'août publié en entier.",
+     "Identifier les 2 personnes à risque de départ. Un 1:1 chacune cette semaine — écouter, pas convaincre.",
+     "Vérifier conformité heures/repos de juillet (CCN HCR) avant que l'Urssaf ne le fasse.",
+     "Plan B écrit par poste : qui couvre quoi si quelqu'un tombe (extras identifiés, numéros à jour).",
+     "Point Élodie : contrats d'août signés, DPAE à jour, rien en attente."]},
+ {r:"20–26 juil", t:"Semaine marge F&B", w:"En pleine saison, un point de marge F&B vaut plus qu'un point d'occupation. Et personne ne le regarde.",
+  a:["Audit prix bar complet : chaque cocktail et vin au ×3 HT minimum (TVA 20 % alcool). Corriger les fuites.",
+     "Identifier les 5 produits à meilleure marge — brief service : ce sont les suggestions par défaut.",
+     "Lancer le registre de gaspillage cuisine (photo + poids, 30 secondes par service).",
+     "Revoir la carte du Petit Café : le déjeuner doit tourner vite et margé, pas gastronomique.",
+     "Un vin au verre premium en avant cette semaine — mesurer l'effet sur le ticket moyen."]},
+ {r:"27 juil–2 août", t:"Charger la reconnaissance avant la tempête", w:"On ne motive pas une équipe épuisée mi-août. On la charge en juillet.",
+  a:["Geste d'équipe avant le rush : dîner, moment, prime symbolique — quelque chose de réel, pas un merci en passant.",
+     "Checkpoint scores : Google/Booking vs baseline semaine 1. Écart nommé, cause nommée.",
+     "Rédiger les 2 packages septembre : vendanges/vin + long séjour. Prêts, pas publiés.",
+     "Événement bar Coupe du Monde : verrouiller la logistique des matchs d'août (droits, écran, staffing, licence IV OK).",
+     "Page Antoine spéciale : bilan juillet complet — le premier tiers du dossier."]},
+ {r:"3–9 août", t:"Discipline de pointe", w:"Août ne se gagne pas par des idées, il se gagne par la tenue. Zéro remise, zéro dérive.",
+  a:["Tenue tarifaire quotidienne : aucune remise, aucune exception. La rareté de 12 chambres est un argument, pas un problème.",
+     "Re-brief SOP Night Manager et gestion réclamation : qui décide quoi entre 22h30 et 7h, sans t'appeler.",
+     "Pickup à 21 jours surveillé chaque matin — réagir sur les trous de sept, pas sur août.",
+     "Capture F&B : si une seule soirée passe sous 60 %, débrief le lendemain matin avec la réception.",
+     "Toi : bloquer tes propres pauses dans Skello. Visible par l'équipe."]},
+ {r:"10–16 août", t:"Audit de mi-saison", w:"C'est la moitié du match. Les chiffres de cette semaine décident si le dossier de septembre est offensif ou défensif.",
+  a:["P&L mi-saison avec Antoine : masse salariale %, capture, direct, scores — vs les cibles de la semaine 1.",
+     "Auto-contrôle conformité complet : checklist Urssaf, DUERP à jour, registre piscine signé, affichages obligatoires.",
+     "Réunion 30 min avec chaque chef de service : un truc qui marche, un truc à corriger.",
+     "Vérifier les dates de fin de CDD — anticiper les soldes de tout compte avec Élodie.",
+     "Corriger UNE chose structurelle identifiée à l'audit. Une seule, mais cette semaine."]},
+ {r:"17–23 août", t:"Lancer septembre pendant qu'ils regardent ailleurs", w:"Septembre improvisé fin août = mois perdu. Septembre lancé le 17 août = arrière-saison pleine.",
+  a:["Publier les packages septembre : site, OTA, Google Business. Vendanges, vin, long séjour.",
+     "Email aux clients de l'été : « revenez en septembre, le Luberon sans la foule » + avantage direct.",
+     "Convertir le public Coupe du Monde du bar : offre locale récurrente (soirée match, apéro vigneron).",
+     "Contacter 3 partenaires locaux (domaines, vélo, guides) pour packager l'arrière-saison.",
+     "Ajuster les tarifs sept : fermes sur les week-ends, souples en semaine, plancher tenu."]},
+ {r:"24–30 août", t:"Protéger l'équipe jusqu'à la ligne", w:"La dernière semaine d'août casse les équipes. Celui qui la traverse bien garde ses meilleurs pour 2027.",
+  a:["Radar fatigue : ajuster les shifts de qui est dans le rouge, quitte à prendre un service toi-même.",
+     "Plan staffing septembre finalisé : qui reste, qui finit, dates exactes dans Skello.",
+     "Préparer les documents de fin de contrat avec Élodie — zéro retard sur les soldes.",
+     "Noter dès maintenant qui tu veux rappeler en 2027 (et leur dire).",
+     "Page Antoine : bilan août + plan septembre en une page."]},
+ {r:"31 août–6 sept", t:"Le pivot arrière-saison", w:"La clientèle change du jour au lendemain : couples, long séjour, locaux. L'hôtel doit changer avec elle.",
+  a:["Ajuster les horaires F&B à la demande réelle (le bar déjeuner-coucher de soleil peut battre le dîner tardif).",
+     "Pousser les offres long séjour : 4+ nuits, avantage direct inclus.",
+     "Basculer le discours commercial : vendanges, lumière d'automne, Luberon calme — sur tous les canaux.",
+     "Revue des coûts : resserrer les commandes F&B sur les couverts réels, pas sur ceux d'août.",
+     "Un événement local au bar cette semaine — la clientèle du village est le revenu récurrent de l'arrière-saison."]},
+ {r:"7–13 sept", t:"Assembler le dossier Ops Director", w:"Un bon résultat non documenté n'existe pas. Cette semaine, la saison devient un argument.",
+  a:["Compiler : chiffres vs cibles, delta scores avis, capture F&B, part directe, masse salariale tenue.",
+     "Lister les systèmes construits : SOPs, DUERP, checklists, machine de vente directe — c'est ça, un profil groupe.",
+     "Rédiger le document : « ce que j'ai tenu à Vilajoun, ce que je répliquerais à l'échelle du groupe ».",
+     "Identifier 3 recommandations concrètes pour 2027 (elles montrent que tu penses déjà au-delà).",
+     "Relecture à froid 48 h plus tard. Puis caler la date avec Antoine."]},
+ {r:"14–20 sept", t:"Finir en beauté côté client", w:"Les scores de fin de saison sont ceux qu'on cite tout l'hiver. Chaque avis de septembre pèse double.",
+  a:["Campagne avis ciblée : chaque départ satisfait sollicité personnellement, pas par email générique.",
+     "Expériences vendanges/vin actives : vérifier que chaque client de la semaine en entend parler.",
+     "Audit qualité complet en client mystère — les standards glissent toujours en fin de saison.",
+     "Photos de l'arrière-saison pour le site et les OTA (la lumière de septembre vend l'année prochaine).",
+     "Tenir les rituels quotidiens comme en juillet. Surtout maintenant."]},
+ {r:"21–30 sept", t:"Clôturer fort, ouvrir 2027", w:"La différence entre un GM et un Ops Director : l'un finit la saison, l'autre a déjà écrit la suivante.",
+  a:["Présenter le dossier à Antoine : bilan saison + proposition de rôle groupe. Rendez-vous formel, pas entre deux portes.",
+     "Entretiens de fin de saison avec chaque membre : feedback honnête + intention de rappel 2027.",
+     "Débrief saison écrit : ce qui a marché, ce qui casse à l'échelle, le plan d'ouverture 2027.",
+     "Lancer la checklist pré-fermeture (maintenance, inventaires, contrats fournisseurs à renégocier à froid).",
+     "Soldes de tout compte finalisés avec Élodie — une saison propre se termine proprement."]}
+];
+
+/* ---------- render week ---------- */
+let shownWeek = weekNum;
+function renderWeek(n){
+  shownWeek = n;
+  const w = WEEKS[n-1];
+  document.getElementById('wk-num').textContent = 'Semaine '+n+' / 13';
+  document.getElementById('wk-title').textContent = w.t;
+  document.getElementById('wk-why').textContent = w.w;
+  document.getElementById('week-range').textContent = w.r;
+  const box = document.getElementById('wk-actions');
+  box.innerHTML='';
+  w.a.forEach((txt,i)=>{
+    const key='w'+n+'a'+i;
+    const row=document.createElement('div');
+    row.className='check'+(store.get(key)==='1'?' done':'');
+    row.innerHTML='<div class="box">'+(store.get(key)==='1'?'✓':'')+'</div><div class="txt">'+txt+'</div>';
+    row.onclick=()=>{
+      const done = row.classList.toggle('done');
+      store.set(key,done?'1':'0');
+      row.querySelector('.box').textContent = done?'✓':'';
+    };
+    box.appendChild(row);
+  });
+  document.getElementById('prev-wk').disabled = n<=1;
+  document.getElementById('next-wk').disabled = n>=13;
+  document.getElementById('today-week-mission').textContent =
+    'S'+weekNum+' — '+WEEKS[weekNum-1].t+' ('+WEEKS[weekNum-1].r+')';
+}
+document.getElementById('prev-wk').onclick=()=>renderWeek(shownWeek-1);
+document.getElementById('next-wk').onclick=()=>renderWeek(shownWeek+1);
+document.getElementById('now-wk').onclick=()=>renderWeek(weekNum);
+renderWeek(weekNum);
+
+/* ---------- render rituals (per-day persistence) ---------- */
+const rBox = document.getElementById('rituals');
+function ritualCount(){
+  return RITUALS.reduce((s,_,i)=>s+(store.get('r-'+dateKey+'-'+i)==='1'?1:0),0);
+}
+function updateStreakLine(){
+  document.getElementById('streak').textContent = ritualCount()+' / '+RITUALS.length+' rituels faits aujourd\u2019hui';
+}
+RITUALS.forEach((r,i)=>{
+  const key='r-'+dateKey+'-'+i;
+  const row=document.createElement('div');
+  row.className='check'+(store.get(key)==='1'?' done':'');
+  row.innerHTML='<div class="box">'+(store.get(key)==='1'?'✓':'')+'</div><div class="txt">'+r.t+'</div>';
+  row.onclick=()=>{
+    const done=row.classList.toggle('done');
+    store.set(key,done?'1':'0');
+    row.querySelector('.box').textContent=done?'✓':'';
+    updateStreakLine();
+  };
+  rBox.appendChild(row);
+});
+updateStreakLine();
+</script>
+</body>
+</html>
