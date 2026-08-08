@@ -1264,6 +1264,46 @@
 <script>
   function toggle(id) { document.getElementById(id).classList.toggle('open'); }
 
+  // ---- Open in the Spotify app, falling back to the web player ---------
+  // spotify: URIs hand off to the installed app, but fail silently when
+  // there's no app to catch them — so we try the URI, then bail out to the
+  // web URL if we're still here a moment later.
+  function spotifyUri(webUrl) {
+    const m = webUrl.match(/open\.spotify\.com\/(track|playlist|album|artist)\/([A-Za-z0-9]+)/);
+    return m ? 'spotify:' + m[1] + ':' + m[2] : null;
+  }
+
+  function openInSpotify(webUrl) {
+    const uri = spotifyUri(webUrl);
+    if (!uri) { window.open(webUrl, '_blank', 'noopener'); return; }
+
+    let done = false;
+    const stand_down = () => { done = true; };
+    // If the app opens, this tab loses focus/visibility — that's our signal
+    // that the handoff worked and no fallback is needed.
+    window.addEventListener('blur', stand_down, { once: true });
+    window.addEventListener('pagehide', stand_down, { once: true });
+    document.addEventListener('visibilitychange', stand_down, { once: true });
+
+    setTimeout(() => {
+      window.removeEventListener('blur', stand_down);
+      if (!done && !document.hidden) window.open(webUrl, '_blank', 'noopener');
+    }, 1400);
+
+    window.location.href = uri;
+  }
+
+  // Intercept track and Spotify-glyph clicks. Modified clicks (cmd/ctrl/
+  // middle) are left alone so "open in new tab" still behaves normally.
+  document.addEventListener('click', e => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    const a = e.target.closest('a.track, a.pl-open');
+    if (!a) return;
+    e.preventDefault();
+    e.stopPropagation();
+    openInSpotify(a.href);
+  });
+
   // Clicking the chevron expands/collapses the tracklist (no navigation).
   function chevClick(e, btn) {
     e.preventDefault();
@@ -1283,7 +1323,7 @@
       return;
     }
     const link = head.querySelector('.pl-open');
-    if (link) window.open(link.href, '_blank', 'noopener');
+    if (link) openInSpotify(link.href);
   }
 
   const blocks = Array.from(document.querySelectorAll('.year-block'));
