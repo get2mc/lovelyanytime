@@ -154,7 +154,7 @@
     line-height: 1.05; letter-spacing: -0.01em; color: var(--ink);
     display: inline-block; transition: color .18s;
   }
-  .pl-info:hover .pl-month { color: var(--green); }
+  .pl-head:hover .pl-month { color: var(--green); }
   .pl-month .yr-faint { color: var(--ink-light); font-style: italic; font-size: 18px; }
   .pl-sub {
     margin-top: 5px; font-size: 12px; color: var(--ink-light);
@@ -1312,18 +1312,12 @@
   }
 
   // Click routing on a row:
-  //   month name / info block -> toggle the tracklist
-  //   chevron button          -> toggle the tracklist
-  //   Spotify glyph           -> open in Spotify (its own link)
-  //   anywhere else (art, gap)-> open the playlist in Spotify
+  //   Spotify glyph -> opens that month's playlist in Spotify (its own link)
+  //   anywhere else -> toggles the tracklist, never navigates
+  // Spotify is only ever reachable from the glyph or from a track.
   function rowClick(e, head) {
     if (e.target.closest('.chev-btn') || e.target.closest('.pl-open')) return;
-    if (e.target.closest('.pl-info')) {
-      head.closest('.playlist').classList.toggle('open');
-      return;
-    }
-    const link = head.querySelector('.pl-open');
-    if (link) openInSpotify(link.href);
+    head.closest('.playlist').classList.toggle('open');
   }
 
   const blocks = Array.from(document.querySelectorAll('.year-block'));
