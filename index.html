@@ -3,715 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lovely Anytime — Hospitality Consultancy, Provence</title>
-<meta name="description" content="A small hospitality consultancy based in Provence, France. Food & beverage, brand positioning, operations, training, and AI advisory.">
+<title>Lovely Anytime</title>
+<meta name="description" content="Sometimes you just want to build something lovely.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* Same tokens as the music archive, so the two pages read as one site. */
   :root {
-    --black: #0d0d0b;
-    --charcoal: #1c1c1a;
-    --warm-white: #faf8f5;
-    --off-white: #f2efe9;
-    --stone: #a89f95;
-    --linen: #d6d0c8;
-    --accent: #8b7355;
-    --text: #3a3834;
-    --text-muted: #7a7570;
-    --rule: rgba(168,159,149,0.22);
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'DM Sans', system-ui, sans-serif;
+    --cream: #F7F3EC;
+    --cream-dark: #EDE8DF;
+    --paper: #FCFAF5;
+    --ink: #1A1916;
+    --ink-mid: #4A4742;
+    --ink-light: #8A8680;
+    --rule: #DAD4C9;
+    --green: #3B5E45;
   }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
   body {
-    background: var(--warm-white);
-    color: var(--text);
-    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
     font-weight: 300;
-    font-size: 15px;
-    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── CONTAINER ── */
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 32px;
+  /* Faint paper grain, carried over from the archive. */
+  body::before {
+    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
   }
 
-  /* ── HEADER ── */
-  header {
-    padding: 72px 0 64px;
-    text-align: center;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  header svg {
-    width: 380px;
-    height: auto;
-    display: block;
-    margin: 0 auto 28px;
-  }
-
-  header p {
-    font-size: 12px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--stone);
-    font-weight: 300;
-  }
-
-  /* ── SECTIONS ── */
-  .section {
-    padding: 72px 0;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .section:last-of-type { border-bottom: none; }
-
-  .section-label {
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    margin-bottom: 32px;
-    display: block;
-  }
-
-  /* ── INTRO ── */
-  .intro p {
-    font-family: var(--serif);
-    font-size: clamp(22px, 3vw, 30px);
-    font-weight: 300;
-    line-height: 1.55;
-    color: var(--charcoal);
-  }
-
-  .intro p em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  /* ── PROJECTS ── */
-  .project-list {
-    list-style: none;
+  /* ── STAGE ── */
+  main {
+    position: relative; z-index: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
-  }
-
-  .project-item {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: baseline;
-    gap: 24px;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .project-item:first-child { border-top: 1px solid var(--rule); }
-
-  .project-name {
-    font-family: var(--serif);
-    font-size: 19px;
-    font-weight: 400;
-    color: var(--charcoal);
-    line-height: 1.3;
-  }
-
-  .project-desc {
-    font-size: 12px;
-    color: var(--text-muted);
-    letter-spacing: 0.04em;
-    margin-top: 4px;
-  }
-
-  .project-tag {
-    font-size: 9px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--stone);
-    white-space: nowrap;
-  }
-
-  /* ── BACKGROUND ── */
-  .background-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .background-item {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: baseline;
-    gap: 24px;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .background-item:first-child { border-top: 1px solid var(--rule); }
-
-  .bg-name {
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--charcoal);
-  }
-
-  .bg-location {
-    font-size: 11px;
-    color: var(--stone);
-    letter-spacing: 0.04em;
-    margin-top: 2px;
-  }
-
-  .bg-role {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--stone);
-    white-space: nowrap;
-  }
-
-  /* ── SERVICES ── */
-  .services-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid var(--rule);
-  }
-
-  .services-list li {
-    padding: 16px 0;
-    border-bottom: 1px solid var(--rule);
-    font-size: 15px;
-    color: var(--text);
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    line-height: 1.5;
-  }
-
-  .services-list li::before {
-    content: '';
-    width: 20px;
-    height: 1px;
-    background: var(--accent);
-    flex-shrink: 0;
-    margin-top: 10px;
-  }
-
-  .service-note {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 4px;
-    display: block;
-    line-height: 1.7;
-  }
-
-  /* ── CTA ── */
-  .cta-section {
-    padding: 72px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+    padding: 80px 56px;
     text-align: center;
   }
 
-  .cta-section h2 {
-    font-family: var(--serif);
-    font-size: clamp(28px, 3.5vw, 40px);
-    font-weight: 300;
-    color: var(--charcoal);
-    margin-bottom: 40px;
-    line-height: 1.3;
-  }
+  .logo { width: 340px; max-width: 76vw; height: auto; display: block; }
 
-  /* ── FORM ── */
-  .form-wrap {
-    max-width: 480px;
-    margin: 0 auto;
-    text-align: left;
-  }
-
-  .form-fields {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .field {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .field label {
-    font-size: 9px;
+  .line {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.5rem, 3.4vw, 2.35rem);
     font-weight: 400;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--stone);
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    max-width: 20ch;
   }
-
-  .field input,
-  .field select,
-  .field textarea {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--linen);
-    padding: 10px 0;
-    font-family: var(--sans);
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--charcoal);
-    outline: none;
-    width: 100%;
-    transition: border-color 0.25s;
-    -webkit-appearance: none;
-    border-radius: 0;
-  }
-
-  .field input::placeholder,
-  .field textarea::placeholder { color: var(--linen); }
-
-  .field input:focus,
-  .field select:focus,
-  .field textarea:focus { border-bottom-color: var(--charcoal); }
-
-  .field select {
-    cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6' fill='none' stroke='%23d6d0c8' stroke-width='1'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 4px center;
-  }
-
-  .field select option { color: var(--charcoal); }
-  .field textarea { resize: none; height: 80px; line-height: 1.6; }
-
-  .btn-submit {
-    width: 100%;
-    padding: 16px;
-    background: var(--charcoal);
-    color: var(--warm-white);
-    border: none;
-    font-family: var(--sans);
-    font-size: 9px;
-    font-weight: 400;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 8px;
-  }
-
-  .btn-submit:hover { background: var(--accent); }
-  .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
-
-  .form-note {
-    font-size: 10px;
-    color: var(--stone);
-    text-align: center;
-    letter-spacing: 0.06em;
-    margin-top: 20px;
-    line-height: 1.7;
-  }
-
-  .form-success {
-    display: none;
-    text-align: center;
-    padding: 48px 0;
-  }
-
-  .form-success h3 {
-    font-family: var(--serif);
-    font-size: 28px;
-    font-weight: 300;
-    color: var(--charcoal);
-    margin-bottom: 12px;
-  }
-
-  .form-success p {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.8;
-  }
+  .line em { font-style: italic; color: var(--ink-mid); }
 
   /* ── FOOTER ── */
   footer {
+    position: relative; z-index: 2;
     border-top: 1px solid var(--rule);
-    padding: 32px 0;
-    text-align: center;
+    padding: 26px 56px;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  footer p {
-    font-size: 10px;
-    color: var(--linen);
+  .foot-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  footer a.foot-link {
+    font-size: 11px;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
   }
 
-  footer a {
-    color: var(--linen);
+  footer a.foot-link {
     text-decoration: none;
-    transition: color 0.2s;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: color .2s, border-color .2s;
   }
+  footer a.foot-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
+  footer a.foot-link:focus-visible,
+  .door:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; border-radius: 2px; }
 
-  footer a:hover { color: var(--stone); }
+  /* ── DOOR ── */
+  /* Small and quiet — the way through to the archive. */
+  .door { display: block; line-height: 0; padding: 8px; margin: -8px; }
+  .door svg { width: 20px; height: auto; display: block; }
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
+  .door-frame { fill: none; stroke: var(--ink-light); stroke-width: 6; transition: stroke .2s; }
+  .door-sill  { stroke: var(--ink-light); stroke-width: 6; stroke-linecap: round; transition: stroke .2s; }
+  .door-panel {
+    transform-box: view-box;
+    transform-origin: 15px 80px;
+    transition: transform .5s cubic-bezier(.4,0,.2,1);
   }
+  .door-panel path { fill: var(--cream); stroke: var(--ink-light); stroke-width: 6; transition: stroke .2s; }
+  .door-panel circle { fill: var(--ink-light); transition: fill .2s; }
+  .door-glow { opacity: 0; transition: opacity .45s ease; }
 
-  header { animation: fadeUp 0.8s ease forwards; }
-  .section { animation: fadeUp 0.8s ease 0.1s forwards; opacity: 0; }
+  .door:hover .door-frame,
+  .door:hover .door-sill,
+  .door:hover .door-panel path,
+  .door:focus-visible .door-frame,
+  .door:focus-visible .door-sill,
+  .door:focus-visible .door-panel path { stroke: var(--green); }
+  .door:hover .door-panel circle,
+  .door:focus-visible .door-panel circle { fill: var(--green); }
+  .door:hover .door-panel,
+  .door:focus-visible .door-panel { transform: scaleX(0.34); }
+  .door:hover .door-glow,
+  .door:focus-visible .door-glow { opacity: 1; }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 560px) {
-    header svg { width: 280px; }
-    .form-row { grid-template-columns: 1fr; }
-    .project-item, .background-item { grid-template-columns: 1fr; gap: 4px; }
-    .section-label { font-size: 15px; letter-spacing: 0.1em; }
+  @media (max-width: 720px) {
+    main { padding: 64px 24px; gap: 30px; }
+    footer {
+      padding: 22px 24px;
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+    .foot-stack { gap: 12px; }
+    .door svg { width: 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
   }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="container">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160">
-      <text x="300" y="90" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="68" font-weight="400" fill="#1a1a1a" text-anchor="middle" letter-spacing="-1">LOVELY</text>
-      <line x1="180" y1="103" x2="420" y2="103" stroke="#1a1a1a" stroke-width="0.8"/>
-      <text x="300" y="128" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="13" font-weight="300" fill="#1a1a1a" text-anchor="middle" letter-spacing="9">ANYTIME</text>
-    </svg>
-    <p class="header-sub">Hospitality Consultancy<span class="header-sub-sep"> &nbsp;·&nbsp; </span><br class="mobile-break">Provence, France</p>
-    <p style="margin-top:12px;"><span style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--charcoal);">EN</span> &nbsp;·&nbsp; <a href="fr.html" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--stone); text-decoration:none;">FR</a></p>
-  </div>
-</header>
-
 <main>
 
-  <!-- INTRO -->
-  <div class="section intro">
-    <div class="container">
-      <p>Sometimes you just want to build something. <em>Lovely Anytime</em> is my something — a small hospitality consultancy based in Provence, France.</p>
-    </div>
-  </div>
+  <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" role="img" aria-label="Lovely Anytime">
+    <text x="300" y="90" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="68" font-weight="400" fill="#1A1916" text-anchor="middle" letter-spacing="-1">LOVELY</text>
+    <line x1="180" y1="103" x2="420" y2="103" stroke="#1A1916" stroke-width="0.8"/>
+    <text x="300" y="128" font-family="'DM Sans','Helvetica Neue',Helvetica,sans-serif" font-size="13" font-weight="300" fill="#1A1916" text-anchor="middle" letter-spacing="9">ANYTIME</text>
+  </svg>
 
-  <!-- PROJECTS -->
-  <div class="section" id="projects">
-    <div class="container">
-      <span class="section-label">Some of my projects</span>
-      <ul class="project-list">
-        <li class="project-item">
-          <div>
-            <div class="project-name">Domaine de La Cavalerie</div>
-            <div class="project-desc">Opening of a luxury estate in Provence</div>
-          </div>
-          <span class="project-tag">Opening</span>
-        </li>
-        <li class="project-item">
-          <div>
-            <div class="project-name">Quatre Murs</div>
-            <div class="project-desc">Brand positioning and market deployment</div>
-          </div>
-          <span class="project-tag">Brand</span>
-        </li>
-        <li class="project-item">
-          <div>
-            <div class="project-name">Yelloworking</div>
-            <div class="project-desc">Renovation and strategic repositioning</div>
-          </div>
-          <span class="project-tag">Strategy</span>
-        </li>
-        <li class="project-item">
-          <div>
-            <div class="project-name">Undercover House Provence</div>
-            <div class="project-desc">Permit negotiation and project management</div>
-          </div>
-          <span class="project-tag">Operations</span>
-        </li>
-        <li class="project-item">
-          <div>
-            <div class="project-name">Kiss Studio</div>
-            <div class="project-desc">Hospitality concept consultancy</div>
-          </div>
-          <span class="project-tag">Concept</span>
-        </li>
-        <li class="project-item">
-          <div>
-            <div class="project-name">V______s</div>
-            <div class="project-desc">Project management for an upcoming hospitality brand</div>
-          </div>
-          <span class="project-tag">Launch 2027</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- BACKGROUND -->
-  <div class="section" id="background">
-    <div class="container">
-      <span class="section-label">A bit of background</span>
-      <p style="font-size:14px; color:var(--text-muted); line-height:1.9; margin-bottom:36px; max-width:52ch;">An international career spanning two decades — working closely with owners and senior management, notably in South Africa, Jamaica and the United States.</p>
-      <ul class="background-list">
-        <li class="background-item">
-          <div>
-            <div class="bg-name">Inverdoorn Game Reserve</div>
-            <div class="bg-location">South Africa</div>
-          </div>
-          <span class="bg-role">Operations</span>
-        </li>
-        <li class="background-item">
-          <div>
-            <div class="bg-name">GoldenEye Hotel</div>
-            <div class="bg-location">Jamaica</div>
-          </div>
-          <span class="bg-role">Food & Beverage</span>
-        </li>
-        <li class="background-item">
-          <div>
-            <div class="bg-name">Island Outpost</div>
-            <div class="bg-location">Jamaica &amp; North America</div>
-          </div>
-          <span class="bg-role">Sales & Marketing</span>
-        </li>
-        <li class="background-item">
-          <div>
-            <div class="bg-name">The Standard, High Line</div>
-            <div class="bg-location">New York City</div>
-          </div>
-          <span class="bg-role">Quality Control</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <div class="section" id="services">
-    <div class="container">
-      <span class="section-label">Services</span>
-      <ul class="services-list">
-        <li>
-          <div>
-            Food & beverage concept development
-            <span class="service-note">Working with stakeholders to define, cost and deploy new F&B programming — from concept and menu architecture to supplier selection and launch.</span>
-          </div>
-        </li>
-        <li>
-          <div>
-            Employee culture & company handbook
-            <span class="service-note">Translating ownership's vision into actionable operational workflows — values, standards, and day-to-day expectations, written clearly and built to last.</span>
-          </div>
-        </li>
-        <li>
-          <div>
-            Standard operating procedures
-            <span class="service-note">Writing and deploying SOPs that align service standards with operational reality and financial expectations. Built for the team that has to use them.</span>
-          </div>
-        </li>
-        <li>
-          <div>
-            Training & development
-            <span class="service-note">Group sessions or one-on-one coaching — tailored to the property, the team, and the standards you're working towards.</span>
-          </div>
-        </li>
-        <li>
-          <div>
-            Recruitment
-            <span class="service-note">End-to-end recruitment for hospitality roles — from search and shortlisting through to interview and hiring. Finding people who fit the culture, not just the job description.</span>
-          </div>
-        </li>
-        <li>
-          <div>
-            Technology & AI advisory
-            <span class="service-note">Auditing existing systems, deploying new solutions, and building frameworks for AI transition.</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- THE PLAYLIST -->
-  <div class="section" id="playlist">
-    <div class="container">
-      <span class="section-label">Notebook</span>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; border-top:1px solid var(--rule); padding-top:24px; margin-top:0;">
-        <p style="font-family:var(--serif); font-size:20px; font-weight:300; color:var(--charcoal); line-height:1.4; max-width:44ch;">Musings on hospitality, culture, and the details that make or break a guest experience.</p>
-        <a href="notebook.html" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--stone); text-decoration:none; white-space:nowrap; transition:color 0.2s;" onmouseover="this.style.color='var(--charcoal)'" onmouseout="this.style.color='var(--stone)'">Read →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA / CONTACT -->
-  <div class="section cta-section" id="contact">
-    <div class="container">
-      <h2>Get in touch.</h2>
-      <div class="form-wrap">
-        <div id="formBlock">
-          <div class="form-fields">
-            <div class="form-row">
-              <div class="field">
-                <label>Full Name</label>
-                <input type="text" id="fname" placeholder="Your name" autocomplete="name">
-              </div>
-              <div class="field">
-                <label>Company / Entity</label>
-                <input type="text" id="fcompany" placeholder="Company name">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label>Asset Type</label>
-                <select id="fasset">
-                  <option value="" disabled selected>Select type</option>
-                  <option>Independent luxury hotel</option>
-                  <option>Private estate or villa</option>
-                  <option>Hospitality investment portfolio</option>
-                  <option>Family office</option>
-                  <option>Pre-opening project</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="field">
-                <label>Location</label>
-                <input type="text" id="flocation" placeholder="Country or region">
-              </div>
-            </div>
-            <div class="field">
-              <label>Brief Description</label>
-              <textarea id="fdesc" placeholder="Tell me about your project."></textarea>
-            </div>
-            <div class="field">
-              <label>Email Address</label>
-              <input type="email" id="femail" placeholder="your@email.com" autocomplete="email">
-            </div>
-            <button class="btn-submit" id="submitBtn" type="button">Get in Touch</button>
-            <p class="form-note">All enquiries handled with discretion.</p>
-          </div>
-        </div>
-        <div class="form-success" id="formSuccess">
-          <h3>Message received.</h3>
-          <p>Thank you. I'll be in touch shortly.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <p class="line">Sometimes you just want to build something <em>lovely</em>.</p>
 
 </main>
 
 <footer>
-  <div class="container">
-    <p>© 2025 Lovely Anytime &nbsp;·&nbsp; Mark Collins &nbsp;·&nbsp; <a href="notebook.html">My Notebook</a> &nbsp;·&nbsp; <a href="#" onclick="showPrivacy()">Privacy Policy</a></p>
+  <div class="foot-stack">
+    <a class="foot-link" href="work.html">My Work</a>
+    <a class="door" href="music.html" aria-label="Open the music archive" title="The Collection">
+      <svg viewBox="0 0 100 145" aria-hidden="true">
+        <defs>
+          <linearGradient id="doorglow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#6E8F73"/>
+            <stop offset="100%" stop-color="#3B5E45"/>
+          </linearGradient>
+          <clipPath id="doorway">
+            <path d="M15,135 L15,60 A35,35 0 0 1 85,60 L85,135 Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#doorway)">
+          <rect class="door-glow" x="15" y="24" width="70" height="111" fill="url(#doorglow)"/>
+          <g class="door-panel">
+            <path d="M15,135 L15,60 A35,35 0 0 1 85,60 L85,135 Z"/>
+            <circle cx="74" cy="100" r="5"/>
+          </g>
+        </g>
+        <path class="door-frame" d="M15,135 L15,60 A35,35 0 0 1 85,60 L85,135"/>
+        <line class="door-sill" x1="7" y1="135" x2="93" y2="135"/>
+      </svg>
+    </a>
   </div>
 </footer>
-
-<!-- PRIVACY POLICY MODAL -->
-<div id="privacyModal" style="display:none; position:fixed; inset:0; background:rgba(250,248,245,0.98); z-index:500; overflow-y:auto; padding:60px 24px;">
-  <div style="max-width:640px; margin:0 auto;">
-    <button onclick="hidePrivacy()" style="background:none; border:none; font-family:var(--sans); font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); cursor:pointer; margin-bottom:48px; padding:0;">← Back</button>
-    <p style="font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); margin-bottom:16px;">Privacy Policy</p>
-    <div style="width:36px; height:1px; background:var(--accent); margin-bottom:32px;"></div>
-    <h1 style="font-family:var(--serif); font-size:36px; font-weight:300; color:var(--charcoal); margin-bottom:40px; line-height:1.1;">Privacy Policy</h1>
-    <p style="font-size:12px; color:var(--stone); margin-bottom:40px; letter-spacing:0.04em;">Last updated: March 2025</p>
-    <div style="display:flex; flex-direction:column; gap:36px;">
-      <div>
-        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">1. Who We Are</h2>
-        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">This website is operated by Mark Collins, trading as Lovely Anytime. For any privacy-related queries, contact: <a href="/cdn-cgi/l/email-protection#7815121e561b17141411160b381f15191114561b1715" style="color:var(--charcoal);"><span class="__cf_email__" data-cfemail="1a77707c34797576767374695a7d777b737634797577">[email&#160;protected]</span></a></p>
-      </div>
-      <div>
-        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">2. What Data We Collect</h2>
-        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">When you submit an enquiry through this website, we collect your name, email address, and any message you provide. No other data is collected. We do not use cookies, tracking scripts, or analytics tools.</p>
-      </div>
-      <div>
-        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">3. How We Use Your Data</h2>
-        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Your data is used solely to respond to your enquiry. It is not used for marketing, profiling, or any other purpose.</p>
-      </div>
-      <div>
-        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">4. Third Parties</h2>
-        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Enquiry data is processed by Formspree (formspree.io) solely for the purpose of delivering your message. Your data is never sold or shared with any other third party.</p>
-      </div>
-      <div>
-        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">5. Data Retention</h2>
-        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Your data is retained only for as long as necessary to manage your enquiry. If no engagement follows, data is deleted within 12 months of initial contact.</p>
-      </div>
-      <div>
-        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">6. Your Rights</h2>
-        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">Under GDPR you have the right to access, correct, or request deletion of your personal data at any time. Contact <a href="/cdn-cgi/l/email-protection#325f58541c515d5e5e5b5c4172555f535b5e1c515d5f" style="color:var(--charcoal);"><span class="__cf_email__" data-cfemail="8ce1e6eaa2efe3e0e0e5e2ffccebe1ede5e0a2efe3e1">[email&#160;protected]</span></a> and we will respond within 30 days.</p>
-      </div>
-      <div>
-        <h2 style="font-family:var(--sans); font-size:10px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); margin-bottom:14px;">7. Changes to This Policy</h2>
-        <p style="font-size:14px; line-height:1.9; color:var(--text-muted);">This policy may be updated periodically. Any changes will be reflected on this page with a revised date.</p>
-      </div>
-    </div>
-    <div style="margin-top:60px; padding-top:32px; border-top:1px solid var(--rule);">
-      <button onclick="hidePrivacy()" style="background:none; border:none; font-family:var(--sans); font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone); cursor:pointer; padding:0;">← Back to site</button>
-    </div>
-  </div>
-</div>
-
-<script data-cfasync="false">
-  document.getElementById('submitBtn').addEventListener('click', submitForm);
-
-  async function submitForm() {
-    const name  = document.getElementById('fname').value.trim();
-    const email = document.getElementById('femail').value.trim();
-    if (!name || !email) { alert('Please enter your name and email address.'); return; }
-
-    const btn = document.getElementById('submitBtn');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-
-    const data = {
-      name,
-      email,
-      company:     document.getElementById('fcompany').value.trim(),
-      asset:       document.getElementById('fasset').value,
-      location:    document.getElementById('flocation').value.trim(),
-      description: document.getElementById('fdesc').value.trim()
-    };
-
-    try {
-      const res = await fetch('https://formspree.io/f/mvzbelwp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      if (res.ok) {
-        document.getElementById('formBlock').style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'block';
-      } else {
-        btn.textContent = 'Get in Touch';
-        btn.disabled = false;
-        alert('Something went wrong. Please email mark@lovelyanytime.com directly.');
-      }
-    } catch(e) {
-      btn.textContent = 'Get in Touch';
-      btn.disabled = false;
-      alert('Connection error. Please email mark@lovelyanytime.com directly.');
-    }
-  }
-
-  function showPrivacy() {
-    document.getElementById('privacyModal').style.display = 'block';
-    window.scrollTo(0, 0);
-  }
-
-  function hidePrivacy() {
-    document.getElementById('privacyModal').style.display = 'none';
-  }
-</script>
 
 </body>
 </html>
