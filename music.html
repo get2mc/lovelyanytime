@@ -189,6 +189,9 @@
     transition: grid-template-rows .35s cubic-bezier(.4,0,.2,1);
   }
   .playlist.open .tracks-wrap { grid-template-rows: 1fr; }
+  /* Cards closed automatically collapse instantly, so the scroll
+     compensation below can be measured and applied in one frame. */
+  .playlist.snap .tracks-wrap { transition: none; }
   .tracks-clip { overflow: hidden; }
   .tracks { margin: 6px 0 4px 98px; border-left: 1px solid var(--rule); }
   .track {
@@ -1262,8 +1265,6 @@
 </footer>
 
 <script>
-  function toggle(id) { document.getElementById(id).classList.toggle('open'); }
-
   // ---- Open in the Spotify app, falling back to the web player ---------
   // spotify: URIs hand off to the installed app, but fail silently when
   // there's no app to catch them — so we try the URI, then bail out to the
@@ -1304,11 +1305,47 @@
     openInSpotify(a.href);
   });
 
+  // Only one tracklist stays open at a time. Closing a long list above the
+  // one you're opening would drag the page up under the cursor, so the
+  // others are collapsed instantly and the scroll is corrected by the same
+  // amount — the row you clicked stays exactly where it was.
+  function toggleCard(pl, head) {
+    const wasOpen = pl.classList.contains('open');
+    const anchor = head || pl.querySelector('.pl-head');
+    const before = anchor.getBoundingClientRect().top;
+
+    document.querySelectorAll('.playlist.open').forEach(other => {
+      if (other === pl) return;
+      other.classList.add('snap');
+      other.classList.remove('open');
+    });
+
+    // Reading the rect forces layout, so this reflects the collapsed state.
+    // Chrome's own scroll anchoring may already have compensated, in which
+    // case this measures ~0 and we leave it alone; Safari doesn't, so we do.
+    const after = anchor.getBoundingClientRect().top;
+    const shift = after - before;
+    if (shift) {
+      // The page sets scroll-behavior:smooth, which would animate this
+      // correction while the collapse happens instantly — a visible lurch.
+      // Suspend it so the adjustment lands in the same frame.
+      const root = document.documentElement;
+      const prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollBy(0, shift);
+      root.style.scrollBehavior = prev;
+    }
+
+    document.querySelectorAll('.playlist.snap').forEach(o => o.classList.remove('snap'));
+    pl.classList.toggle('open', !wasOpen);
+  }
+
   // Clicking the chevron expands/collapses the tracklist (no navigation).
   function chevClick(e, btn) {
     e.preventDefault();
     e.stopPropagation();
-    btn.closest('.playlist').classList.toggle('open');
+    const pl = btn.closest('.playlist');
+    toggleCard(pl, pl.querySelector('.pl-head'));
   }
 
   // Click routing on a row:
@@ -1317,7 +1354,7 @@
   // Spotify is only ever reachable from the glyph or from a track.
   function rowClick(e, head) {
     if (e.target.closest('.chev-btn') || e.target.closest('.pl-open')) return;
-    head.closest('.playlist').classList.toggle('open');
+    toggleCard(head.closest('.playlist'), head);
   }
 
   const blocks = Array.from(document.querySelectorAll('.year-block'));
@@ -1365,7 +1402,7 @@
     head.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
         e.preventDefault();
-        head.closest('.playlist').classList.toggle('open');
+        toggleCard(head.closest('.playlist'), head);
         syncExpanded(head);
       }
     });
