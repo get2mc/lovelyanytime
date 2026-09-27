@@ -433,6 +433,16 @@
   .pl-head:hover .pl-art img, .pl-head:focus-visible .pl-art img, .playlist.open .pl-art img { filter: none; }
   .pl-head:hover .pl-art::after, .pl-head:focus-visible .pl-art::after, .playlist.open .pl-art::after { opacity: .12; }
 
+
+  /* ---- Music intro ---- */
+  .header-left p.intro-music {
+    margin-top: 22px; max-width: 560px;
+    font-size: 15px; line-height: 1.7; font-weight: 300;
+    letter-spacing: 0; text-transform: none; color: var(--ink-mid);
+  }
+  body.v-pod .intro-music { display: none; }
+  @media (max-width: 820px) { .header-left p.intro-music { font-size: 14px; margin-top: 18px; } }
+  body.tv .header-left p.intro-music { font-size: 20px; max-width: 820px; }
 </style>
 </head>
 <body>
@@ -444,6 +454,7 @@
       <a class="view-link on" href="music.html" data-view="music" aria-current="page">Music</a><span class="view-dot" aria-hidden="true">·</span><a class="view-link" href="#podcasts" data-view="podcasts">Podcasts</a>
     </nav>
     <p class="sub-music">A monthly archive — 2016 to present</p>
+    <p class="intro-music">Since 2016 I've been making a playlist most months — more or less. Each one is built from the tunes I discover over the weeks: they catch my mood at the time, they follow my taste, and they bring back memories. It's my own journal, really. I hope you enjoy it.</p>
     <p class="sub-pod">Shows worth the hours — in no particular order</p>
   </div>
   <div class="header-right">
@@ -492,7 +503,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">19</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0TsyRkY7Dm3dawYr0EUXCB" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0TsyRkY7Dm3dawYr0EUXCB" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -507,7 +518,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">20</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7dA3rmcRE9iLCFnBDIjsEn" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7dA3rmcRE9iLCFnBDIjsEn" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -522,7 +533,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">21</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/66nEiGhzWeI1iBFn0mOZj8" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/66nEiGhzWeI1iBFn0mOZj8" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -537,7 +548,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">21</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/66VGQqLH22TFWX2tMnb563" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/66VGQqLH22TFWX2tMnb563" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -552,7 +563,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">16</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2zaM4DFZE1u53SttakiMEx" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2zaM4DFZE1u53SttakiMEx" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -567,7 +578,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">11</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/50P4mJDR2GLgHRb7aIlVD8" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/50P4mJDR2GLgHRb7aIlVD8" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -589,7 +600,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">18</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4VS9JnYw97o4IVVeqN3mMR" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4VS9JnYw97o4IVVeqN3mMR" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -604,7 +615,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">13</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7zIBuZ16dyYsJaqFTTsGsN" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7zIBuZ16dyYsJaqFTTsGsN" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -619,7 +630,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">30</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4C7agd0dsb5NdCwca8YJSc" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4C7agd0dsb5NdCwca8YJSc" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -634,7 +645,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">24</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4QPEpypRSIZ5NHrH10gYhs" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4QPEpypRSIZ5NHrH10gYhs" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -649,7 +660,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">23</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7KltFhF5OCsx5TRIKgYs6t" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7KltFhF5OCsx5TRIKgYs6t" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -664,7 +675,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">19</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5AB7rB8ryrPGs4MFNAj8VK" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5AB7rB8ryrPGs4MFNAj8VK" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -679,7 +690,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">30</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/3b4wjwNYhZ0xc2wD0zhR3Z" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/3b4wjwNYhZ0xc2wD0zhR3Z" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -694,7 +705,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">28</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5jKfWpgbAv4I67V3fqfy8C" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5jKfWpgbAv4I67V3fqfy8C" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -709,7 +720,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">18</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7o0a5ffmlQR9cXhGcXDkHv" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7o0a5ffmlQR9cXhGcXDkHv" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -724,7 +735,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">30</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/609Uy5chQoUvAsuQaoBJkQ" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/609Uy5chQoUvAsuQaoBJkQ" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -739,7 +750,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">13</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5R3EYrLTxSpx7BwIZQjD2j" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5R3EYrLTxSpx7BwIZQjD2j" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -761,7 +772,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">26</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5fJtqoqlvlPp3R2NpVPoNe" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5fJtqoqlvlPp3R2NpVPoNe" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -776,7 +787,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">29</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/33oz5SeqMBIREEfhnkutqe" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/33oz5SeqMBIREEfhnkutqe" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -791,7 +802,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">22</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2McVR0Se1QPEZtCmQH3E0t" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2McVR0Se1QPEZtCmQH3E0t" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -806,7 +817,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">23</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5L28WuesS2mhNRHdrTf3OW" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5L28WuesS2mhNRHdrTf3OW" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -821,7 +832,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">14</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/3wPrKaft7hSpt6HskOv7xb" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/3wPrKaft7hSpt6HskOv7xb" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -836,7 +847,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">39</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4XSmWVjMU77MJTh9l7k5qI" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4XSmWVjMU77MJTh9l7k5qI" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -851,7 +862,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">23</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/32jGYRQKHmcJ4cdskiG2HP" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/32jGYRQKHmcJ4cdskiG2HP" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -866,7 +877,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">15</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/3CHvn5SQ2NK35XdiP61Wp8" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/3CHvn5SQ2NK35XdiP61Wp8" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -881,7 +892,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">27</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6Fr2nnzNQrfajtMLpymIkp" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6Fr2nnzNQrfajtMLpymIkp" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -896,7 +907,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">18</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/1OSLXEZRbvRRakeJWzDrjF" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/1OSLXEZRbvRRakeJWzDrjF" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -918,7 +929,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">24</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7hF4sVwuJbsO5z5jKe3Xwq" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7hF4sVwuJbsO5z5jKe3Xwq" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -933,7 +944,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">19</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/752616Er7sQPkZ7Z0adBuS" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/752616Er7sQPkZ7Z0adBuS" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -948,7 +959,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">17</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4A3imeIqx7eOFRTpeGizeP" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4A3imeIqx7eOFRTpeGizeP" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -963,7 +974,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">23</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/1WZYs1Iq9nHH1pYEfFLs5R" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/1WZYs1Iq9nHH1pYEfFLs5R" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -978,7 +989,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">14</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7xRRKC6kH5mu8tZluKOdxx" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7xRRKC6kH5mu8tZluKOdxx" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -993,7 +1004,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">31</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6Bh3kHW2DrJRwv58RmtnEd" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6Bh3kHW2DrJRwv58RmtnEd" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1008,7 +1019,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">23</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/48msUjEnBahxFMRcPiHKYR" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/48msUjEnBahxFMRcPiHKYR" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1023,7 +1034,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">31</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0qI1S7YvLBXaAH8BJiqC8G" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0qI1S7YvLBXaAH8BJiqC8G" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1038,7 +1049,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">13</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4ufZfI22Q1syB1t9gpBE45" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4ufZfI22Q1syB1t9gpBE45" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1053,7 +1064,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">20</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6ERt6U56SSAdSs0pXQHs2e" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6ERt6U56SSAdSs0pXQHs2e" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1068,7 +1079,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">20</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6Kk8O5H1cbSR43LfI85l6m" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6Kk8O5H1cbSR43LfI85l6m" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1083,7 +1094,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">16</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0PBJJb9Mo3xnaxE08yUVRV" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0PBJJb9Mo3xnaxE08yUVRV" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1098,7 +1109,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">33</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/1l0eYJZgwsVmGmD5PqZpSv" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/1l0eYJZgwsVmGmD5PqZpSv" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1120,7 +1131,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">30</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2ZwjRsImjecg2EWBJF9XtP" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2ZwjRsImjecg2EWBJF9XtP" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1135,7 +1146,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">21</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0G8nEgBwtrlqATwW3mzD29" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0G8nEgBwtrlqATwW3mzD29" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1150,7 +1161,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">21</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2ckVisNxDTohTOUKWyhdsf" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2ckVisNxDTohTOUKWyhdsf" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1165,7 +1176,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">15</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4OPi9YvDMb4SknrIQnvrPL" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4OPi9YvDMb4SknrIQnvrPL" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1180,7 +1191,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">11</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/08eQsjZPoVetfbv4H4Btqv" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/08eQsjZPoVetfbv4H4Btqv" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1195,7 +1206,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">45</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0vbLLAoEJpHN2otX8ElQyZ" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0vbLLAoEJpHN2otX8ElQyZ" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1210,7 +1221,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">21</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7rY2yX9jWLbk6dfMkGlF8b" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7rY2yX9jWLbk6dfMkGlF8b" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1225,7 +1236,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">24</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6IfAljsYg5966ITn7Ag2WE" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6IfAljsYg5966ITn7Ag2WE" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1240,7 +1251,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">15</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0g32NNkJR9OBmJMIIIzP6K" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0g32NNkJR9OBmJMIIIzP6K" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1255,7 +1266,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">19</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5tk01md8DaXywsDPcYXkeu" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5tk01md8DaXywsDPcYXkeu" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1277,7 +1288,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">17</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0ZmaICz67Ck77dqiw6preS" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0ZmaICz67Ck77dqiw6preS" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1292,7 +1303,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">20</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6mphQqgUZoxCgVg124s4U2" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6mphQqgUZoxCgVg124s4U2" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1307,7 +1318,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">15</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/52cTe2e1o4jEGnY2Gx9jFF" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/52cTe2e1o4jEGnY2Gx9jFF" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1322,7 +1333,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">1</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/57ZWLyX8lfqjdI2KK2Eyj3" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/57ZWLyX8lfqjdI2KK2Eyj3" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1337,7 +1348,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">28</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0dIRqzJRMa6VSIpr14ML2F" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0dIRqzJRMa6VSIpr14ML2F" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1352,7 +1363,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">50</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/79lvJgqd0saaAjg7bhMY65" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/79lvJgqd0saaAjg7bhMY65" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1367,7 +1378,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">22</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0AW0zV1dSPYBikWlbGSul6" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0AW0zV1dSPYBikWlbGSul6" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1382,7 +1393,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">10</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2uvCTL7tvlyKXk8pDrv6mf" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2uvCTL7tvlyKXk8pDrv6mf" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1397,7 +1408,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">12</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6OYWR8V4v3ecBrDoRQwl15" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6OYWR8V4v3ecBrDoRQwl15" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1412,7 +1423,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">9</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4YjISoYXom62PUZeZIToMv" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4YjISoYXom62PUZeZIToMv" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1434,7 +1445,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">22</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0TW396NAk6wK6V66tPXeQb" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0TW396NAk6wK6V66tPXeQb" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1449,7 +1460,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">23</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2OihrrIhePcgQCEneD6nnD" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2OihrrIhePcgQCEneD6nnD" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1464,7 +1475,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">24</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/1Vpyn9pfUdkc0vrsA9oP6b" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/1Vpyn9pfUdkc0vrsA9oP6b" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1479,7 +1490,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">11</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2nCEulCYRdNBPxkWmeDf1T" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2nCEulCYRdNBPxkWmeDf1T" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1494,7 +1505,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">17</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0ZkIU65VcYvkUeV4TVgV0u" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0ZkIU65VcYvkUeV4TVgV0u" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1509,7 +1520,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">41</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2GMSf4E90w9hX0FX7g7d2J" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2GMSf4E90w9hX0FX7g7d2J" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1524,7 +1535,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">25</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7IVqWiBAegImMVTfbdNiuO" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7IVqWiBAegImMVTfbdNiuO" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1539,7 +1550,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">13</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0Wc6lnkcrAfd0VUZ11JjCD" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0Wc6lnkcrAfd0VUZ11JjCD" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1554,7 +1565,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">21</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7aii6SuRk2sieg9ZviVw7V" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7aii6SuRk2sieg9ZviVw7V" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1569,7 +1580,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">2</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5pAfzUIfEFRX8rNni57mNl" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5pAfzUIfEFRX8rNni57mNl" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1591,7 +1602,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">9</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/38JBBMntZRQ2YduSKM9w9N" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/38JBBMntZRQ2YduSKM9w9N" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1606,7 +1617,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">17</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5xqSJPRfBjFw7bexbeD7K6" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5xqSJPRfBjFw7bexbeD7K6" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1621,7 +1632,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">16</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7t7m7A7wteQkQOrvhgkFm6" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7t7m7A7wteQkQOrvhgkFm6" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1636,7 +1647,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">22</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0HipI1FSIFNpIvSdxugmQU" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0HipI1FSIFNpIvSdxugmQU" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1651,7 +1662,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">19</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7LgVDTem2VWH4HYG2I8m7m" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7LgVDTem2VWH4HYG2I8m7m" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1666,7 +1677,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">46</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7v5iGkq4FAs8naVpGPyuXt" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7v5iGkq4FAs8naVpGPyuXt" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1681,7 +1692,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">29</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6WbETzy5Be5fDPFBKluWhq" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6WbETzy5Be5fDPFBKluWhq" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1696,7 +1707,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">15</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0uenZeTuBDrc7O9OqzrIo1" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0uenZeTuBDrc7O9OqzrIo1" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1711,7 +1722,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">4</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4Ynsi0SAOA52sHgADmlvSI" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4Ynsi0SAOA52sHgADmlvSI" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1733,7 +1744,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">15</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6by6H85Mk4ZSvhsViZS2xR" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6by6H85Mk4ZSvhsViZS2xR" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1748,7 +1759,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">17</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/61aWv2V4Fs9pm4ACK8cJVZ" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/61aWv2V4Fs9pm4ACK8cJVZ" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1763,7 +1774,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">8</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/3kONXOk11MIzb6ZbG3Dr10" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/3kONXOk11MIzb6ZbG3Dr10" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1778,7 +1789,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">9</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/24vb8K7iMm2HQTstlcIEmt" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/24vb8K7iMm2HQTstlcIEmt" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1793,7 +1804,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">10</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/21iC48PizkcN710fUxpfcX" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/21iC48PizkcN710fUxpfcX" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1808,7 +1819,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">37</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/1XBpPy0j0DxpWkbwcP9d2u" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/1XBpPy0j0DxpWkbwcP9d2u" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1823,7 +1834,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">14</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/7uI6PVjEJwor1A6CIPe38t" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/7uI6PVjEJwor1A6CIPe38t" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1838,7 +1849,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">14</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/03ShmpaqkN7A4XjpS3r5hJ" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/03ShmpaqkN7A4XjpS3r5hJ" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1853,7 +1864,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">22</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5beZYV5n4CbIiHKkiT6Jks" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5beZYV5n4CbIiHKkiT6Jks" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1868,7 +1879,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">18</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0KcT77F7rvF7p3mUG6xJhM" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0KcT77F7rvF7p3mUG6xJhM" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1890,7 +1901,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">21</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6skJY9OSBCAFRVnCiWSroH" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6skJY9OSBCAFRVnCiWSroH" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1905,7 +1916,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">14</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6rvaxbXnItiw0TLyggVqBG" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6rvaxbXnItiw0TLyggVqBG" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1920,7 +1931,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">20</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2tkD6dFvPceKBaRximbYgR" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2tkD6dFvPceKBaRximbYgR" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1935,7 +1946,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">20</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/4iPE3JCaJ0LEo2HLxjwrXg" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/4iPE3JCaJ0LEo2HLxjwrXg" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1950,7 +1961,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">13</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/3yS6chhpMi00YdQunh69of" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/3yS6chhpMi00YdQunh69of" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1965,7 +1976,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">44</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0gGCSHIlvc6GW4Poh9J65P" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0gGCSHIlvc6GW4Poh9J65P" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1980,7 +1991,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">30</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5CprY1nzwbZJkzqlqHPX99" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5CprY1nzwbZJkzqlqHPX99" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -1995,7 +2006,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">26</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/6sOGCVAbf3cR5GF84mx5J6" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/6sOGCVAbf3cR5GF84mx5J6" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2010,7 +2021,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">40</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/74XpNFyKjwUr1ob8iXhSqx" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/74XpNFyKjwUr1ob8iXhSqx" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2025,7 +2036,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">21</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/57gduHvCUCAvWvqZGDF3I3" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/57gduHvCUCAvWvqZGDF3I3" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2047,7 +2058,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">17</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/0XK4h31nKBxyWB9LVfAwIC" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/0XK4h31nKBxyWB9LVfAwIC" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2062,7 +2073,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">30</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/2z6A7H6c1HIIrqCofQmzSs" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/2z6A7H6c1HIIrqCofQmzSs" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2077,7 +2088,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">23</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/098bk1ZYvqEAEeNG4b0ynq" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/098bk1ZYvqEAEeNG4b0ynq" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2092,7 +2103,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">27</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/36s1ZZW4otaGxFB0Mo3MSa" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/36s1ZZW4otaGxFB0Mo3MSa" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2107,7 +2118,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">28</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/1DHwcbW7Endv97I99EtCRu" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/1DHwcbW7Endv97I99EtCRu" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2122,7 +2133,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">54</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/63EHL31BUYRwwtuwfHpA5c" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/63EHL31BUYRwwtuwfHpA5c" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2137,7 +2148,7 @@
             </div>
             <div class="pl-side">
               <span class="pl-count">30</span>
-              <a class="pl-open" href="https://open.spotify.com/playlist/5oDPvctkFC6EYonW4jMXcX" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
+              <a class="pl-open" href="https://open.spotify.com/playlist/5oDPvctkFC6EYonW4jMXcX" target="_blank" rel="noopener" title="Open in Spotify" aria-label="Open in Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85zm1.22-2.72a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.24 1.33.36.22.48.69.25 1.07zm.11-2.84C14.8 8.99 9.4 8.79 6.3 9.73a.93.93 0 1 1-.54-1.78c3.56-1.08 9.52-.87 13.27 1.35a.93.93 0 1 1-.95 1.6z"/></svg></a>
               <button class="chev-btn" type="button" aria-label="Show tracklist" onclick="chevClick(event,this)"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
           </div>
@@ -2189,14 +2200,25 @@
   const GO = '<svg class="track-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>';
 
   function spotifyUri(u){const m=u.match(/open\.spotify\.com\/(track|playlist|album|artist|show|episode)\/([A-Za-z0-9]+)/);return m?'spotify:'+m[1]+':'+m[2]:null;}
+  // Open Spotify links in the app.
+  // Phones/tablets: leave the tap alone — a normal open.spotify.com link is handed
+  // straight to the installed app by iOS/Android (Universal/App Links).
+  // Desktop: go to the spotify: URI from the click itself (browsers ignore it from
+  // hidden iframes, which is why it used to fall back to the web player). If the
+  // app doesn't take focus, the web player opens instead.
+  const IS_TOUCH=window.matchMedia('(hover: none) and (pointer: coarse)').matches;
   function openInSpotify(u){
-    const uri=spotifyUri(u); if(!uri){window.open(u,'_blank','noopener');return;}
-    let done=false; const mark=()=>{if(document.hidden)done=true;};
-    document.addEventListener('visibilitychange',mark);
-    const f=document.createElement('iframe'); f.style.display='none'; f.src=uri; document.body.appendChild(f);
-    setTimeout(()=>{document.removeEventListener('visibilitychange',mark);f.remove();if(!done&&!document.hidden)window.location.href=u;},1200);
+    const uri=spotifyUri(u); if(!uri){ window.open(u,'_blank','noopener'); return; }
+    let left=false; const mark=()=>{ left=true; };
+    window.addEventListener('blur',mark); document.addEventListener('visibilitychange',mark);
+    window.location.href=uri;
+    setTimeout(()=>{
+      window.removeEventListener('blur',mark); document.removeEventListener('visibilitychange',mark);
+      if(!left && document.hasFocus() && !document.hidden) window.location.href=u;
+    },3000);
   }
   document.addEventListener('click',e=>{
+    if(IS_TOUCH) return;
     if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0) return;
     const a=e.target.closest('a.track, a.pl-open, a.pod'); if(!a) return;
     e.preventDefault(); openInSpotify(a.href);
