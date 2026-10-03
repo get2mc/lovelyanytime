@@ -77,11 +77,14 @@ a:focus-visible,button:focus-visible{outline:2px dashed var(--ochre);outline-off
 .stop .meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92rem;color:var(--ink-soft)}
 .stop .meta a{font-weight:500;text-underline-offset:3px}
 .stop .addr{font-size:.92rem;color:var(--ink-soft)}
-.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
-.lnk{font-family:var(--hand);font-size:1rem;line-height:1.5;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);
-  border-radius:12px 8px 13px 7px;padding:1px 11px}
-.lnk::after{content:" ↗";color:var(--ochre)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.lnk{display:inline-flex;align-items:center;gap:7px;font-family:var(--body);font-size:.88rem;font-weight:500;line-height:1;color:var(--ink);
+  text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:9px 14px 9px 12px;min-height:38px;background:var(--paper)}
+.lnk::before{content:"";flex:none;width:15px;height:15px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229.5%22/%3E%3Cpath%20d%3D%22M2.5%2012h19M12%202.5c3%203.2%203%2015.8%200%2019M12%202.5c-3%203.2-3%2015.8%200%2019%22/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229.5%22/%3E%3Cpath%20d%3D%22M2.5%2012h19M12%202.5c3%203.2%203%2015.8%200%2019M12%202.5c-3%203.2-3%2015.8%200%2019%22/%3E%3C/svg%3E") center/contain no-repeat}
+.lnk.insta::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%225%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%224%22/%3E%3Ccircle%20cx%3D%2217.3%22%20cy%3D%226.7%22%20r%3D%221%22%20fill%3D%22black%22%20stroke%3D%22none%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%225%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%224%22/%3E%3Ccircle%20cx%3D%2217.3%22%20cy%3D%226.7%22%20r%3D%221%22%20fill%3D%22black%22%20stroke%3D%22none%22/%3E%3C/svg%3E")}
 .lnk.map{color:var(--sea);border-color:var(--sea)}
+.lnk.map::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202a7%207%200%200%200-7%207c0%205.2%207%2013%207%2013s7-7.8%207-13a7%207%200%200%200-7-7zm0%209.5A2.5%202.5%200%201%201%2012%206.5a2.5%202.5%200%200%201%200%205z%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202a7%207%200%200%200-7%207c0%205.2%207%2013%207%2013s7-7.8%207-13a7%207%200%200%200-7-7zm0%209.5A2.5%202.5%200%201%201%2012%206.5a2.5%202.5%200%200%201%200%205z%22/%3E%3C/svg%3E")}
+.lnk.dir::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2219%22%20r%3D%222.5%22/%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%225%22%20r%3D%222.5%22/%3E%3Cpath%20d%3D%22M8.5%2019H15a3.5%203.5%200%200%200%200-7H9a3.5%203.5%200%200%201%200-7h6.5%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2219%22%20r%3D%222.5%22/%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%225%22%20r%3D%222.5%22/%3E%3Cpath%20d%3D%22M8.5%2019H15a3.5%203.5%200%200%200%200-7H9a3.5%203.5%200%200%201%200-7h6.5%22/%3E%3C/svg%3E")}
 .lnk:hover{background:var(--paper-2)}
 .stop .who{font-family:var(--hand);font-size:1rem;color:var(--ink-soft)}
 .stamp{font-family:var(--hand);font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;border:2px solid currentColor;
@@ -142,7 +145,7 @@ a:focus-visible,button:focus-visible{outline:2px dashed var(--ochre);outline-off
         <div class="body">
           <h3>Leave Goult</h3>
           <p>About an hour and a quarter down the A7. Drop the car and bags at the Résidence, where Seil moves into the apartment suite for the three of us. Then a ten-minute walk up to Maison Empereur.</p>
-          <div class="links"><a class="lnk map" href="https://www.google.com/maps/dir/?api=1&amp;origin=Goult&amp;destination=18+Quai+du+Port+13002+Marseille" target="_blank" rel="noopener">Directions: Goult → Vieux-Port</a></div>
+          <div class="links"><a class="lnk map dir" href="https://www.google.com/maps/dir/?api=1&amp;origin=Goult&amp;destination=18+Quai+du+Port+13002+Marseille" target="_blank" rel="noopener">Directions</a></div>
         </div>
       </div>
       <div class="stop" data-who="msk">
@@ -160,7 +163,7 @@ a:focus-visible,button:focus-visible{outline:2px dashed var(--ochre);outline-off
           <h3>Lunch at À Moro <span class="stamp tobook">To book</span></h3>
           <p>A small Italian bistro in a side street off rue de Rome. Lunch Monday to Friday, 12:00–15:00.</p>
           <div class="addr">3 rue Venture, 13001</div>
-          <div class="links"><a class="lnk" href="https://www.instagram.com/amoromarseille/" target="_blank" rel="noopener">Instagram</a><a class="lnk map" href="https://www.google.com/maps/search/?api=1&amp;query=A+Moro+3+rue+Venture+13001+Marseille" target="_blank" rel="noopener">Google Maps</a></div>
+          <div class="links"><a class="lnk insta" href="https://www.instagram.com/amoromarseille/" target="_blank" rel="noopener">Instagram</a><a class="lnk map" href="https://www.google.com/maps/search/?api=1&amp;query=A+Moro+3+rue+Venture+13001+Marseille" target="_blank" rel="noopener">Google Maps</a></div>
         </div>
       </div>
       <div class="stop" data-who="msk">
@@ -184,7 +187,7 @@ a:focus-visible,button:focus-visible{outline:2px dashed var(--ochre);outline-off
           <h3>Drinks at Pépère <span class="stamp tobook">To book</span></h3>
           <p>A cocktail bar in the 6th, ten minutes' walk from dinner. Open Tuesday to Saturday from 17:00.</p>
           <div class="addr">24 rue Sylvabelle, 13006 · 06 98 38 65 04</div>
-          <div class="links"><a class="lnk" href="https://www.instagram.com/pepere_marseille/" target="_blank" rel="noopener">Instagram</a><a class="lnk map" href="https://www.google.com/maps/search/?api=1&amp;query=P%C3%A9p%C3%A8re+24+rue+Sylvabelle+13006+Marseille" target="_blank" rel="noopener">Google Maps</a></div>
+          <div class="links"><a class="lnk insta" href="https://www.instagram.com/pepere_marseille/" target="_blank" rel="noopener">Instagram</a><a class="lnk map" href="https://www.google.com/maps/search/?api=1&amp;query=P%C3%A9p%C3%A8re+24+rue+Sylvabelle+13006+Marseille" target="_blank" rel="noopener">Google Maps</a></div>
         </div>
       </div>
       <div class="stop" data-who="msk">
@@ -212,7 +215,7 @@ a:focus-visible,button:focus-visible{outline:2px dashed var(--ochre);outline-off
         <div class="body">
           <h3>Drive the Corniche to Les Goudes</h3>
           <p>Past the Vallon des Auffes and Pointe Rouge to the fishing village at the end of the road. About 30 minutes.</p>
-          <div class="links"><a class="lnk map" href="https://www.google.com/maps/dir/?api=1&amp;origin=18+Quai+du+Port+13002+Marseille&amp;destination=La+Marine+des+Goudes+13008+Marseille&amp;waypoints=Corniche+Kennedy+Marseille" target="_blank" rel="noopener">Directions: Vieux-Port → Les Goudes</a></div>
+          <div class="links"><a class="lnk map dir" href="https://www.google.com/maps/dir/?api=1&amp;origin=18+Quai+du+Port+13002+Marseille&amp;destination=La+Marine+des+Goudes+13008+Marseille&amp;waypoints=Corniche+Kennedy+Marseille" target="_blank" rel="noopener">Directions</a></div>
         </div>
       </div>
       <div class="stop" data-who="msk">
@@ -229,7 +232,7 @@ a:focus-visible,button:focus-visible{outline:2px dashed var(--ochre);outline-off
         <div class="body">
           <h3>Drive back to Goult</h3>
           <p>About an hour and a half.</p>
-          <div class="links"><a class="lnk map" href="https://www.google.com/maps/dir/?api=1&amp;origin=Les+Goudes+Marseille&amp;destination=Goult" target="_blank" rel="noopener">Directions: Les Goudes → Goult</a></div>
+          <div class="links"><a class="lnk map dir" href="https://www.google.com/maps/dir/?api=1&amp;origin=Les+Goudes+Marseille&amp;destination=Goult" target="_blank" rel="noopener">Directions</a></div>
         </div>
       </div>
       <div class="stop quiet" data-who="msk">
@@ -266,7 +269,7 @@ a:focus-visible,button:focus-visible{outline:2px dashed var(--ochre);outline-off
         <div class="body">
           <h3>Mark drives Seil to the airport</h3>
           <p>About an hour from Goult.</p>
-          <div class="links"><a class="lnk map" href="https://www.google.com/maps/dir/?api=1&amp;origin=Goult&amp;destination=A%C3%A9roport+Marseille+Provence" target="_blank" rel="noopener">Directions: Goult → MRS</a></div>
+          <div class="links"><a class="lnk map dir" href="https://www.google.com/maps/dir/?api=1&amp;origin=Goult&amp;destination=A%C3%A9roport+Marseille+Provence" target="_blank" rel="noopener">Directions</a></div>
         </div>
       </div>
       <div class="stop" data-who="s">
